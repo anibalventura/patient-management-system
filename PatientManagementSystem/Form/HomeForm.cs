@@ -33,7 +33,9 @@ namespace PatientManagementSystem
 
         private void BtnDoctors_Click(object sender, EventArgs e)
         {
-
+            DoctorsForm newDoctorsForm = new DoctorsForm();
+            newDoctorsForm.Show();
+            this.Hide();
         }
 
         private void BtnLabTest_Click(object sender, EventArgs e)
