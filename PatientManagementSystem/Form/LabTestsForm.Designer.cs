@@ -33,10 +33,10 @@ namespace PatientManagementSystem
             this.BtnAdd = new System.Windows.Forms.Button();
             this.BtnEdit = new System.Windows.Forms.Button();
             this.BtnDelete = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DgvLabTests = new System.Windows.Forms.DataGridView();
             this.BtnBack = new System.Windows.Forms.Button();
             this.TlpMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvLabTests)).BeginInit();
             this.SuspendLayout();
             // 
             // TlpMain
@@ -49,7 +49,7 @@ namespace PatientManagementSystem
             this.TlpMain.Controls.Add(this.BtnAdd, 1, 0);
             this.TlpMain.Controls.Add(this.BtnEdit, 1, 3);
             this.TlpMain.Controls.Add(this.BtnDelete, 2, 3);
-            this.TlpMain.Controls.Add(this.dataGridView1, 1, 1);
+            this.TlpMain.Controls.Add(this.DgvLabTests, 1, 1);
             this.TlpMain.Controls.Add(this.BtnBack, 1, 4);
             this.TlpMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TlpMain.Location = new System.Drawing.Point(0, 0);
@@ -103,22 +103,22 @@ namespace PatientManagementSystem
             this.BtnDelete.UseVisualStyleBackColor = false;
             this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
-            // dataGridView1
+            // DgvLabTests
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TlpMain.SetColumnSpan(this.dataGridView1, 2);
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(104, 93);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.TlpMain.SetRowSpan(this.dataGridView1, 2);
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(466, 198);
-            this.dataGridView1.TabIndex = 3;
+            this.DgvLabTests.AllowUserToAddRows = false;
+            this.DgvLabTests.AllowUserToDeleteRows = false;
+            this.DgvLabTests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TlpMain.SetColumnSpan(this.DgvLabTests, 2);
+            this.DgvLabTests.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DgvLabTests.Location = new System.Drawing.Point(104, 93);
+            this.DgvLabTests.MultiSelect = false;
+            this.DgvLabTests.Name = "DgvLabTests";
+            this.DgvLabTests.ReadOnly = true;
+            this.TlpMain.SetRowSpan(this.DgvLabTests, 2);
+            this.DgvLabTests.RowTemplate.Height = 25;
+            this.DgvLabTests.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvLabTests.Size = new System.Drawing.Size(466, 198);
+            this.DgvLabTests.TabIndex = 3;
             // 
             // BtnBack
             // 
@@ -147,7 +147,7 @@ namespace PatientManagementSystem
             this.Load += new System.EventHandler(this.LabTestsForm_Load);
             this.VisibleChanged += new System.EventHandler(this.LabTestsForm_VisibleChanged);
             this.TlpMain.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvLabTests)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -158,7 +158,7 @@ namespace PatientManagementSystem
         private System.Windows.Forms.Button BtnAdd;
         private System.Windows.Forms.Button BtnEdit;
         private System.Windows.Forms.Button BtnDelete;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DgvLabTests;
         private System.Windows.Forms.Button BtnBack;
     }
 }
