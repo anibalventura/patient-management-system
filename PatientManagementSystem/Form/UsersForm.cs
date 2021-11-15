@@ -12,6 +12,17 @@ namespace PatientManagementSystem
             InitializeComponent();
         }
 
+        // Disable window close button.
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams parms = base.CreateParams;
+                parms.ClassStyle |= 0x200;  // CS_NOCLOSE
+                return parms;
+            }
+        }
+
         #region Events
 
         private void UsersForm_Load(object sender, EventArgs e)
