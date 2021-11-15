@@ -5,6 +5,8 @@ namespace PatientManagementSystem
 {
     public partial class HomeForm : Form
     {
+        public static HomeForm Instance { get; } = new HomeForm();
+
         public HomeForm()
         {
             InitializeComponent();
@@ -24,7 +26,9 @@ namespace PatientManagementSystem
 
         private void BtnUsers_Click(object sender, EventArgs e)
         {
-
+            UsersForm newUsersForm = new UsersForm();
+            newUsersForm.Show();
+            this.Hide();
         }
 
         private void BtnDoctors_Click(object sender, EventArgs e)
