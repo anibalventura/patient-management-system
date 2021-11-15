@@ -74,9 +74,9 @@ namespace PatientManagementSystem
             // 
             // BtnUsers
             // 
-            this.BtnUsers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnUsers.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.BtnUsers.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnUsers.Location = new System.Drawing.Point(137, 109);
+            this.BtnUsers.Location = new System.Drawing.Point(137, 178);
             this.BtnUsers.Name = "BtnUsers";
             this.BtnUsers.Size = new System.Drawing.Size(128, 31);
             this.BtnUsers.TabIndex = 0;
@@ -86,9 +86,9 @@ namespace PatientManagementSystem
             // 
             // BtnDoctors
             // 
-            this.BtnDoctors.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnDoctors.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.BtnDoctors.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnDoctors.Location = new System.Drawing.Point(271, 109);
+            this.BtnDoctors.Location = new System.Drawing.Point(271, 178);
             this.BtnDoctors.Name = "BtnDoctors";
             this.BtnDoctors.Size = new System.Drawing.Size(128, 31);
             this.BtnDoctors.TabIndex = 1;
@@ -98,9 +98,9 @@ namespace PatientManagementSystem
             // 
             // BtnLabTest
             // 
-            this.BtnLabTest.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnLabTest.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.BtnLabTest.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnLabTest.Location = new System.Drawing.Point(405, 109);
+            this.BtnLabTest.Location = new System.Drawing.Point(405, 178);
             this.BtnLabTest.Name = "BtnLabTest";
             this.BtnLabTest.Size = new System.Drawing.Size(128, 31);
             this.BtnLabTest.TabIndex = 2;
@@ -173,6 +173,7 @@ namespace PatientManagementSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(672, 450);
             this.Controls.Add(this.TlpMain);
             this.Controls.Add(this.menuStrip1);

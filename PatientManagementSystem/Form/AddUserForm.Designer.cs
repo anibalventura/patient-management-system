@@ -93,7 +93,7 @@ namespace PatientManagementSystem
             this.LblName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LblName.AutoSize = true;
             this.LblName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblName.Location = new System.Drawing.Point(280, 49);
+            this.LblName.Location = new System.Drawing.Point(280, 50);
             this.LblName.Name = "LblName";
             this.LblName.Size = new System.Drawing.Size(53, 21);
             this.LblName.TabIndex = 0;
@@ -104,7 +104,7 @@ namespace PatientManagementSystem
             this.LblLastName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LblLastName.AutoSize = true;
             this.LblLastName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblLastName.Location = new System.Drawing.Point(250, 98);
+            this.LblLastName.Location = new System.Drawing.Point(250, 100);
             this.LblLastName.Name = "LblLastName";
             this.LblLastName.Size = new System.Drawing.Size(83, 21);
             this.LblLastName.TabIndex = 1;
@@ -115,7 +115,7 @@ namespace PatientManagementSystem
             this.LblEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LblEmail.AutoSize = true;
             this.LblEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblEmail.Location = new System.Drawing.Point(285, 147);
+            this.LblEmail.Location = new System.Drawing.Point(285, 150);
             this.LblEmail.Name = "LblEmail";
             this.LblEmail.Size = new System.Drawing.Size(48, 21);
             this.LblEmail.TabIndex = 2;
@@ -126,7 +126,7 @@ namespace PatientManagementSystem
             this.LblUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LblUsername.AutoSize = true;
             this.LblUsername.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblUsername.Location = new System.Drawing.Point(250, 196);
+            this.LblUsername.Location = new System.Drawing.Point(250, 200);
             this.LblUsername.Name = "LblUsername";
             this.LblUsername.Size = new System.Drawing.Size(83, 21);
             this.LblUsername.TabIndex = 3;
@@ -137,7 +137,7 @@ namespace PatientManagementSystem
             this.LblPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LblPassword.AutoSize = true;
             this.LblPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblPassword.Location = new System.Drawing.Point(254, 245);
+            this.LblPassword.Location = new System.Drawing.Point(254, 250);
             this.LblPassword.Name = "LblPassword";
             this.LblPassword.Size = new System.Drawing.Size(79, 21);
             this.LblPassword.TabIndex = 4;
@@ -148,7 +148,7 @@ namespace PatientManagementSystem
             this.LblConfirmPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LblConfirmPassword.AutoSize = true;
             this.LblConfirmPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblConfirmPassword.Location = new System.Drawing.Point(190, 294);
+            this.LblConfirmPassword.Location = new System.Drawing.Point(190, 300);
             this.LblConfirmPassword.Name = "LblConfirmPassword";
             this.LblConfirmPassword.Size = new System.Drawing.Size(143, 21);
             this.LblConfirmPassword.TabIndex = 5;
@@ -159,7 +159,7 @@ namespace PatientManagementSystem
             this.LblUserType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LblUserType.AutoSize = true;
             this.LblUserType.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblUserType.Location = new System.Drawing.Point(253, 343);
+            this.LblUserType.Location = new System.Drawing.Point(253, 350);
             this.LblUserType.Name = "LblUserType";
             this.LblUserType.Size = new System.Drawing.Size(80, 21);
             this.LblUserType.TabIndex = 6;
@@ -169,7 +169,7 @@ namespace PatientManagementSystem
             // 
             this.TxtBxName.Dock = System.Windows.Forms.DockStyle.Top;
             this.TxtBxName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.TxtBxName.Location = new System.Drawing.Point(339, 52);
+            this.TxtBxName.Location = new System.Drawing.Point(339, 53);
             this.TxtBxName.Name = "TxtBxName";
             this.TxtBxName.Size = new System.Drawing.Size(162, 29);
             this.TxtBxName.TabIndex = 7;
@@ -178,7 +178,7 @@ namespace PatientManagementSystem
             // 
             this.TxtBxLastName.Dock = System.Windows.Forms.DockStyle.Top;
             this.TxtBxLastName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.TxtBxLastName.Location = new System.Drawing.Point(339, 101);
+            this.TxtBxLastName.Location = new System.Drawing.Point(339, 103);
             this.TxtBxLastName.Name = "TxtBxLastName";
             this.TxtBxLastName.Size = new System.Drawing.Size(162, 29);
             this.TxtBxLastName.TabIndex = 8;
@@ -187,7 +187,7 @@ namespace PatientManagementSystem
             // 
             this.TxtBxEmail.Dock = System.Windows.Forms.DockStyle.Top;
             this.TxtBxEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.TxtBxEmail.Location = new System.Drawing.Point(339, 150);
+            this.TxtBxEmail.Location = new System.Drawing.Point(339, 153);
             this.TxtBxEmail.Name = "TxtBxEmail";
             this.TxtBxEmail.Size = new System.Drawing.Size(162, 29);
             this.TxtBxEmail.TabIndex = 9;
@@ -196,7 +196,7 @@ namespace PatientManagementSystem
             // 
             this.TxtBxUsername.Dock = System.Windows.Forms.DockStyle.Top;
             this.TxtBxUsername.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.TxtBxUsername.Location = new System.Drawing.Point(339, 199);
+            this.TxtBxUsername.Location = new System.Drawing.Point(339, 203);
             this.TxtBxUsername.Name = "TxtBxUsername";
             this.TxtBxUsername.Size = new System.Drawing.Size(162, 29);
             this.TxtBxUsername.TabIndex = 10;
@@ -205,7 +205,7 @@ namespace PatientManagementSystem
             // 
             this.TxtBxPassword.Dock = System.Windows.Forms.DockStyle.Top;
             this.TxtBxPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.TxtBxPassword.Location = new System.Drawing.Point(339, 248);
+            this.TxtBxPassword.Location = new System.Drawing.Point(339, 253);
             this.TxtBxPassword.Name = "TxtBxPassword";
             this.TxtBxPassword.PasswordChar = '*';
             this.TxtBxPassword.Size = new System.Drawing.Size(162, 29);
@@ -215,7 +215,7 @@ namespace PatientManagementSystem
             // 
             this.TxtBxConfirmPassword.Dock = System.Windows.Forms.DockStyle.Top;
             this.TxtBxConfirmPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.TxtBxConfirmPassword.Location = new System.Drawing.Point(339, 297);
+            this.TxtBxConfirmPassword.Location = new System.Drawing.Point(339, 303);
             this.TxtBxConfirmPassword.Name = "TxtBxConfirmPassword";
             this.TxtBxConfirmPassword.PasswordChar = '*';
             this.TxtBxConfirmPassword.Size = new System.Drawing.Size(162, 29);
@@ -226,7 +226,7 @@ namespace PatientManagementSystem
             this.CbxUserType.Dock = System.Windows.Forms.DockStyle.Top;
             this.CbxUserType.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.CbxUserType.FormattingEnabled = true;
-            this.CbxUserType.Location = new System.Drawing.Point(339, 346);
+            this.CbxUserType.Location = new System.Drawing.Point(339, 353);
             this.CbxUserType.Name = "CbxUserType";
             this.CbxUserType.Size = new System.Drawing.Size(162, 29);
             this.CbxUserType.TabIndex = 13;
@@ -236,7 +236,7 @@ namespace PatientManagementSystem
             this.BtnSave.BackColor = System.Drawing.Color.LightGreen;
             this.BtnSave.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnSave.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnSave.Location = new System.Drawing.Point(171, 395);
+            this.BtnSave.Location = new System.Drawing.Point(171, 403);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(162, 30);
             this.BtnSave.TabIndex = 14;
@@ -250,7 +250,7 @@ namespace PatientManagementSystem
             this.BtnCancel.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnCancel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnCancel.Location = new System.Drawing.Point(339, 395);
+            this.BtnCancel.Location = new System.Drawing.Point(339, 403);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(162, 30);
             this.BtnCancel.TabIndex = 15;
@@ -262,6 +262,7 @@ namespace PatientManagementSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(675, 450);
             this.Controls.Add(this.TlpMain);
             this.Name = "AddUserForm";

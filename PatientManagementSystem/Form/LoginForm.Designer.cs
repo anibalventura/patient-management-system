@@ -120,6 +120,7 @@ namespace PatientManagementSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(670, 450);
             this.Controls.Add(this.TlpMain);
             this.Name = "LoginForm";
