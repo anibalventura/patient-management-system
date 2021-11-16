@@ -40,10 +40,10 @@ namespace PatientManagementSystem
             this.TxtBxEmail = new System.Windows.Forms.TextBox();
             this.TxtBxIdentification = new System.Windows.Forms.TextBox();
             this.TxtBxPhone = new System.Windows.Forms.MaskedTextBox();
-            this.BtnSave = new System.Windows.Forms.Button();
-            this.BtnCancel = new System.Windows.Forms.Button();
             this.PbDoctor = new System.Windows.Forms.PictureBox();
             this.BtnSelectPhoto = new System.Windows.Forms.Button();
+            this.BtnCancel = new System.Windows.Forms.Button();
+            this.BtnSave = new System.Windows.Forms.Button();
             this.TlpMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbDoctor)).BeginInit();
             this.SuspendLayout();
@@ -186,32 +186,6 @@ namespace PatientManagementSystem
             this.TxtBxPhone.Size = new System.Drawing.Size(164, 29);
             this.TxtBxPhone.TabIndex = 9;
             // 
-            // BtnSave
-            // 
-            this.BtnSave.BackColor = System.Drawing.Color.LightGreen;
-            this.BtnSave.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnSave.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnSave.Location = new System.Drawing.Point(295, 387);
-            this.BtnSave.Name = "BtnSave";
-            this.BtnSave.Size = new System.Drawing.Size(137, 30);
-            this.BtnSave.TabIndex = 10;
-            this.BtnSave.Text = "Save";
-            this.BtnSave.UseVisualStyleBackColor = false;
-            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
-            // 
-            // BtnCancel
-            // 
-            this.BtnCancel.BackColor = System.Drawing.Color.IndianRed;
-            this.BtnCancel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnCancel.Location = new System.Drawing.Point(438, 387);
-            this.BtnCancel.Name = "BtnCancel";
-            this.BtnCancel.Size = new System.Drawing.Size(164, 30);
-            this.BtnCancel.TabIndex = 11;
-            this.BtnCancel.Text = "Cancel";
-            this.BtnCancel.UseVisualStyleBackColor = false;
-            this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
-            // 
             // PbDoctor
             // 
             this.PbDoctor.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -233,6 +207,32 @@ namespace PatientManagementSystem
             this.BtnSelectPhoto.Text = "Select photo";
             this.BtnSelectPhoto.UseVisualStyleBackColor = true;
             this.BtnSelectPhoto.Click += new System.EventHandler(this.BtnSelectPhoto_Click);
+            // 
+            // BtnCancel
+            // 
+            this.BtnCancel.BackColor = System.Drawing.Color.IndianRed;
+            this.BtnCancel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BtnCancel.Location = new System.Drawing.Point(438, 387);
+            this.BtnCancel.Name = "BtnCancel";
+            this.BtnCancel.Size = new System.Drawing.Size(164, 30);
+            this.BtnCancel.TabIndex = 11;
+            this.BtnCancel.Text = "Cancel";
+            this.BtnCancel.UseVisualStyleBackColor = false;
+            this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
+            // 
+            // BtnSave
+            // 
+            this.BtnSave.BackColor = System.Drawing.Color.LightGreen;
+            this.BtnSave.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnSave.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BtnSave.Location = new System.Drawing.Point(295, 387);
+            this.BtnSave.Name = "BtnSave";
+            this.BtnSave.Size = new System.Drawing.Size(137, 30);
+            this.BtnSave.TabIndex = 10;
+            this.BtnSave.Text = "Save";
+            this.BtnSave.UseVisualStyleBackColor = false;
+            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // AddDoctorForm
             // 
