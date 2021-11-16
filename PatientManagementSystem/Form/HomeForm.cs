@@ -70,7 +70,9 @@ namespace PatientManagementSystem
 
         private void BtnLabResults_Click(object sender, EventArgs e)
         {
-
+            LabResultsForm newLabResultsForm = new LabResultsForm();
+            newLabResultsForm.Show();
+            this.Hide();
         }
 
         #endregion
