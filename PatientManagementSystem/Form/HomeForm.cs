@@ -65,7 +65,9 @@ namespace PatientManagementSystem
 
         private void BtnAppointments_Click(object sender, EventArgs e)
         {
-
+            AppointmentsForm newAppointmentsForm = new AppointmentsForm();
+            newAppointmentsForm.Show();
+            this.Hide();
         }
 
         private void BtnLabResults_Click(object sender, EventArgs e)
