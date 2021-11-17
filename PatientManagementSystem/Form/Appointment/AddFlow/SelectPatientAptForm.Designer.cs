@@ -71,31 +71,38 @@ namespace PatientManagementSystem
             // BtnBack
             // 
             this.BtnBack.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.BtnBack.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BtnBack.FlatAppearance.BorderSize = 0;
+            this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBack.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnBack.Location = new System.Drawing.Point(104, 390);
             this.BtnBack.Name = "BtnBack";
             this.BtnBack.Size = new System.Drawing.Size(75, 30);
             this.BtnBack.TabIndex = 2;
             this.BtnBack.Text = "Back";
-            this.BtnBack.UseVisualStyleBackColor = true;
+            this.BtnBack.UseVisualStyleBackColor = false;
             this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // BtnNext
             // 
             this.BtnNext.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.BtnNext.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BtnNext.FlatAppearance.BorderSize = 0;
+            this.BtnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnNext.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnNext.Location = new System.Drawing.Point(495, 390);
             this.BtnNext.Name = "BtnNext";
             this.BtnNext.Size = new System.Drawing.Size(75, 30);
             this.BtnNext.TabIndex = 3;
             this.BtnNext.Text = "Next";
-            this.BtnNext.UseVisualStyleBackColor = true;
+            this.BtnNext.UseVisualStyleBackColor = false;
             this.BtnNext.Click += new System.EventHandler(this.BtnNext_Click);
             // 
             // DgvPatients
             // 
             this.DgvPatients.AllowUserToAddRows = false;
             this.DgvPatients.AllowUserToDeleteRows = false;
+            this.DgvPatients.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DgvPatients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TlpMain.SetColumnSpan(this.DgvPatients, 2);
             this.DgvPatients.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -113,6 +120,8 @@ namespace PatientManagementSystem
             // 
             this.BtnSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.BtnSearch.BackColor = System.Drawing.Color.LightGreen;
+            this.BtnSearch.FlatAppearance.BorderSize = 0;
+            this.BtnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnSearch.Location = new System.Drawing.Point(340, 120);
             this.BtnSearch.Name = "BtnSearch";
@@ -164,6 +173,7 @@ namespace PatientManagementSystem
             // TxtBxPatientIdentification
             // 
             this.TxtBxPatientIdentification.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtBxPatientIdentification.BackColor = System.Drawing.SystemColors.Info;
             this.TxtBxPatientIdentification.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TxtBxPatientIdentification.Location = new System.Drawing.Point(113, 27);
             this.TxtBxPatientIdentification.Mask = "000-0000000-0";

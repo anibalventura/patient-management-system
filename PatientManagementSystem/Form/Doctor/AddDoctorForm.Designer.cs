@@ -39,11 +39,11 @@ namespace PatientManagementSystem
             this.TxtBxLastName = new System.Windows.Forms.TextBox();
             this.TxtBxEmail = new System.Windows.Forms.TextBox();
             this.TxtBxPhone = new System.Windows.Forms.MaskedTextBox();
-            this.PbDoctor = new System.Windows.Forms.PictureBox();
             this.BtnSelectPhoto = new System.Windows.Forms.Button();
             this.BtnCancel = new System.Windows.Forms.Button();
             this.BtnSave = new System.Windows.Forms.Button();
             this.TxtBxIdentification = new System.Windows.Forms.MaskedTextBox();
+            this.PbDoctor = new System.Windows.Forms.PictureBox();
             this.TlpMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbDoctor)).BeginInit();
             this.SuspendLayout();
@@ -142,6 +142,7 @@ namespace PatientManagementSystem
             // 
             // TxtBxName
             // 
+            this.TxtBxName.BackColor = System.Drawing.SystemColors.Info;
             this.TxtBxName.Dock = System.Windows.Forms.DockStyle.Top;
             this.TxtBxName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TxtBxName.Location = new System.Drawing.Point(438, 99);
@@ -151,6 +152,7 @@ namespace PatientManagementSystem
             // 
             // TxtBxLastName
             // 
+            this.TxtBxLastName.BackColor = System.Drawing.SystemColors.Info;
             this.TxtBxLastName.Dock = System.Windows.Forms.DockStyle.Top;
             this.TxtBxLastName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TxtBxLastName.Location = new System.Drawing.Point(438, 143);
@@ -160,6 +162,7 @@ namespace PatientManagementSystem
             // 
             // TxtBxEmail
             // 
+            this.TxtBxEmail.BackColor = System.Drawing.SystemColors.Info;
             this.TxtBxEmail.Dock = System.Windows.Forms.DockStyle.Top;
             this.TxtBxEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TxtBxEmail.Location = new System.Drawing.Point(438, 181);
@@ -169,6 +172,7 @@ namespace PatientManagementSystem
             // 
             // TxtBxPhone
             // 
+            this.TxtBxPhone.BackColor = System.Drawing.SystemColors.Info;
             this.TxtBxPhone.Dock = System.Windows.Forms.DockStyle.Top;
             this.TxtBxPhone.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TxtBxPhone.Location = new System.Drawing.Point(438, 219);
@@ -177,32 +181,27 @@ namespace PatientManagementSystem
             this.TxtBxPhone.Size = new System.Drawing.Size(164, 29);
             this.TxtBxPhone.TabIndex = 9;
             // 
-            // PbDoctor
-            // 
-            this.PbDoctor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PbDoctor.Location = new System.Drawing.Point(70, 99);
-            this.PbDoctor.Name = "PbDoctor";
-            this.TlpMain.SetRowSpan(this.PbDoctor, 3);
-            this.PbDoctor.Size = new System.Drawing.Size(159, 114);
-            this.PbDoctor.TabIndex = 12;
-            this.PbDoctor.TabStop = false;
-            // 
             // BtnSelectPhoto
             // 
+            this.BtnSelectPhoto.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.BtnSelectPhoto.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnSelectPhoto.FlatAppearance.BorderSize = 0;
+            this.BtnSelectPhoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSelectPhoto.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnSelectPhoto.Location = new System.Drawing.Point(70, 219);
             this.BtnSelectPhoto.Name = "BtnSelectPhoto";
             this.BtnSelectPhoto.Size = new System.Drawing.Size(159, 32);
             this.BtnSelectPhoto.TabIndex = 13;
             this.BtnSelectPhoto.Text = "Select photo";
-            this.BtnSelectPhoto.UseVisualStyleBackColor = true;
+            this.BtnSelectPhoto.UseVisualStyleBackColor = false;
             this.BtnSelectPhoto.Click += new System.EventHandler(this.BtnSelectPhoto_Click);
             // 
             // BtnCancel
             // 
             this.BtnCancel.BackColor = System.Drawing.Color.IndianRed;
             this.BtnCancel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnCancel.FlatAppearance.BorderSize = 0;
+            this.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnCancel.Location = new System.Drawing.Point(438, 360);
             this.BtnCancel.Name = "BtnCancel";
@@ -216,6 +215,8 @@ namespace PatientManagementSystem
             // 
             this.BtnSave.BackColor = System.Drawing.Color.LightGreen;
             this.BtnSave.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnSave.FlatAppearance.BorderSize = 0;
+            this.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSave.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnSave.Location = new System.Drawing.Point(295, 360);
             this.BtnSave.Name = "BtnSave";
@@ -227,6 +228,7 @@ namespace PatientManagementSystem
             // 
             // TxtBxIdentification
             // 
+            this.TxtBxIdentification.BackColor = System.Drawing.SystemColors.Info;
             this.TxtBxIdentification.Dock = System.Windows.Forms.DockStyle.Top;
             this.TxtBxIdentification.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TxtBxIdentification.Location = new System.Drawing.Point(438, 259);
@@ -234,6 +236,17 @@ namespace PatientManagementSystem
             this.TxtBxIdentification.Name = "TxtBxIdentification";
             this.TxtBxIdentification.Size = new System.Drawing.Size(164, 29);
             this.TxtBxIdentification.TabIndex = 14;
+            // 
+            // PbDoctor
+            // 
+            this.PbDoctor.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.PbDoctor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PbDoctor.Location = new System.Drawing.Point(70, 99);
+            this.PbDoctor.Name = "PbDoctor";
+            this.TlpMain.SetRowSpan(this.PbDoctor, 3);
+            this.PbDoctor.Size = new System.Drawing.Size(159, 114);
+            this.PbDoctor.TabIndex = 12;
+            this.PbDoctor.TabStop = false;
             // 
             // AddDoctorForm
             // 

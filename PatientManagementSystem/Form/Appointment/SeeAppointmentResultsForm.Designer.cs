@@ -59,6 +59,7 @@ namespace PatientManagementSystem
             // 
             // DgvLabResults
             // 
+            this.DgvLabResults.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DgvLabResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TlpMain.SetColumnSpan(this.DgvLabResults, 2);
             this.DgvLabResults.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -72,14 +73,17 @@ namespace PatientManagementSystem
             // BtnBack
             // 
             this.BtnBack.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.BtnBack.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.TlpMain.SetColumnSpan(this.BtnBack, 2);
+            this.BtnBack.FlatAppearance.BorderSize = 0;
+            this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBack.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnBack.Location = new System.Drawing.Point(299, 363);
             this.BtnBack.Name = "BtnBack";
             this.BtnBack.Size = new System.Drawing.Size(75, 31);
             this.BtnBack.TabIndex = 2;
             this.BtnBack.Text = "Back";
-            this.BtnBack.UseVisualStyleBackColor = true;
+            this.BtnBack.UseVisualStyleBackColor = false;
             this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // SeeAppointmentResultsForm

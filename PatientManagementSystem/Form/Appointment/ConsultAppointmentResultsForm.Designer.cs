@@ -63,6 +63,7 @@ namespace PatientManagementSystem
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TlpMain.SetColumnSpan(this.dataGridView1, 2);
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -80,6 +81,8 @@ namespace PatientManagementSystem
             // 
             this.BtnCompleteAppointment.BackColor = System.Drawing.Color.LightGreen;
             this.BtnCompleteAppointment.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnCompleteAppointment.FlatAppearance.BorderSize = 0;
+            this.BtnCompleteAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCompleteAppointment.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnCompleteAppointment.Location = new System.Drawing.Point(104, 273);
             this.BtnCompleteAppointment.Name = "BtnCompleteAppointment";
@@ -93,6 +96,8 @@ namespace PatientManagementSystem
             // 
             this.BtnCancel.BackColor = System.Drawing.Color.IndianRed;
             this.BtnCancel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnCancel.FlatAppearance.BorderSize = 0;
+            this.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnCancel.Location = new System.Drawing.Point(341, 273);
             this.BtnCancel.Name = "BtnCancel";

@@ -68,6 +68,8 @@ namespace PatientManagementSystem
             this.BtnAdd.BackColor = System.Drawing.Color.LightGreen;
             this.TlpMain.SetColumnSpan(this.BtnAdd, 2);
             this.BtnAdd.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.BtnAdd.FlatAppearance.BorderSize = 0;
+            this.BtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAdd.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnAdd.Location = new System.Drawing.Point(104, 57);
             this.BtnAdd.Name = "BtnAdd";
@@ -81,6 +83,8 @@ namespace PatientManagementSystem
             // 
             this.BtnEdit.BackColor = System.Drawing.Color.SandyBrown;
             this.BtnEdit.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnEdit.FlatAppearance.BorderSize = 0;
+            this.BtnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEdit.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnEdit.Location = new System.Drawing.Point(104, 297);
             this.BtnEdit.Name = "BtnEdit";
@@ -94,6 +98,8 @@ namespace PatientManagementSystem
             // 
             this.BtnDelete.BackColor = System.Drawing.Color.IndianRed;
             this.BtnDelete.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnDelete.FlatAppearance.BorderSize = 0;
+            this.BtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnDelete.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnDelete.Location = new System.Drawing.Point(340, 297);
             this.BtnDelete.Name = "BtnDelete";
@@ -107,6 +113,7 @@ namespace PatientManagementSystem
             // 
             this.DgvLabTests.AllowUserToAddRows = false;
             this.DgvLabTests.AllowUserToDeleteRows = false;
+            this.DgvLabTests.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DgvLabTests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TlpMain.SetColumnSpan(this.DgvLabTests, 2);
             this.DgvLabTests.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -123,14 +130,17 @@ namespace PatientManagementSystem
             // BtnBack
             // 
             this.BtnBack.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.BtnBack.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.TlpMain.SetColumnSpan(this.BtnBack, 2);
+            this.BtnBack.FlatAppearance.BorderSize = 0;
+            this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBack.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnBack.Location = new System.Drawing.Point(299, 362);
             this.BtnBack.Name = "BtnBack";
             this.BtnBack.Size = new System.Drawing.Size(75, 30);
             this.BtnBack.TabIndex = 4;
             this.BtnBack.Text = "Back";
-            this.BtnBack.UseVisualStyleBackColor = true;
+            this.BtnBack.UseVisualStyleBackColor = false;
             this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // LabTestsForm

@@ -62,6 +62,8 @@ namespace PatientManagementSystem
             // 
             this.BtnReport.BackColor = System.Drawing.Color.LightGreen;
             this.BtnReport.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnReport.FlatAppearance.BorderSize = 0;
+            this.BtnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnReport.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnReport.Location = new System.Drawing.Point(171, 254);
             this.BtnReport.Name = "BtnReport";
@@ -75,6 +77,8 @@ namespace PatientManagementSystem
             // 
             this.BtnCancel.BackColor = System.Drawing.Color.IndianRed;
             this.BtnCancel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnCancel.FlatAppearance.BorderSize = 0;
+            this.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnCancel.Location = new System.Drawing.Point(339, 254);
             this.BtnCancel.Name = "BtnCancel";
@@ -97,6 +101,7 @@ namespace PatientManagementSystem
             // 
             // TxtBxResult
             // 
+            this.TxtBxResult.BackColor = System.Drawing.SystemColors.Info;
             this.TxtBxResult.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TxtBxResult.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TxtBxResult.Location = new System.Drawing.Point(339, 187);

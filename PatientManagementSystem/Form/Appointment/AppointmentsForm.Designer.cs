@@ -74,6 +74,8 @@ namespace PatientManagementSystem
             this.BtnAdd.BackColor = System.Drawing.Color.LightGreen;
             this.TlpMain.SetColumnSpan(this.BtnAdd, 4);
             this.BtnAdd.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.BtnAdd.FlatAppearance.BorderSize = 0;
+            this.BtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAdd.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnAdd.Location = new System.Drawing.Point(104, 57);
             this.BtnAdd.Name = "BtnAdd";
@@ -87,6 +89,8 @@ namespace PatientManagementSystem
             // 
             this.BtnConsult.BackColor = System.Drawing.Color.SandyBrown;
             this.BtnConsult.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnConsult.FlatAppearance.BorderSize = 0;
+            this.BtnConsult.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnConsult.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnConsult.Location = new System.Drawing.Point(104, 273);
             this.BtnConsult.Name = "BtnConsult";
@@ -100,6 +104,8 @@ namespace PatientManagementSystem
             // 
             this.BtnSeeResults.BackColor = System.Drawing.Color.DarkTurquoise;
             this.BtnSeeResults.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnSeeResults.FlatAppearance.BorderSize = 0;
+            this.BtnSeeResults.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSeeResults.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnSeeResults.Location = new System.Drawing.Point(340, 273);
             this.BtnSeeResults.Name = "BtnSeeResults";
@@ -113,6 +119,8 @@ namespace PatientManagementSystem
             // 
             this.BtnConsultResults.BackColor = System.Drawing.Color.SandyBrown;
             this.BtnConsultResults.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnConsultResults.FlatAppearance.BorderSize = 0;
+            this.BtnConsultResults.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnConsultResults.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnConsultResults.Location = new System.Drawing.Point(222, 273);
             this.BtnConsultResults.Name = "BtnConsultResults";
@@ -125,18 +133,22 @@ namespace PatientManagementSystem
             // BtnBack
             // 
             this.BtnBack.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.BtnBack.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.TlpMain.SetColumnSpan(this.BtnBack, 4);
+            this.BtnBack.FlatAppearance.BorderSize = 0;
+            this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBack.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnBack.Location = new System.Drawing.Point(299, 363);
             this.BtnBack.Name = "BtnBack";
             this.BtnBack.Size = new System.Drawing.Size(75, 30);
             this.BtnBack.TabIndex = 4;
             this.BtnBack.Text = "Back";
-            this.BtnBack.UseVisualStyleBackColor = true;
+            this.BtnBack.UseVisualStyleBackColor = false;
             this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // DgvAppointments
             // 
+            this.DgvAppointments.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DgvAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TlpMain.SetColumnSpan(this.DgvAppointments, 4);
             this.DgvAppointments.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -151,6 +163,8 @@ namespace PatientManagementSystem
             // 
             this.BtnDelete.BackColor = System.Drawing.Color.IndianRed;
             this.BtnDelete.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnDelete.FlatAppearance.BorderSize = 0;
+            this.BtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnDelete.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnDelete.Location = new System.Drawing.Point(458, 273);
             this.BtnDelete.Name = "BtnDelete";

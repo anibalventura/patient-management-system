@@ -85,6 +85,7 @@ namespace PatientManagementSystem
             // 
             // TxtBxUsername
             // 
+            this.TxtBxUsername.BackColor = System.Drawing.SystemColors.Info;
             this.TxtBxUsername.Dock = System.Windows.Forms.DockStyle.Top;
             this.TxtBxUsername.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TxtBxUsername.Location = new System.Drawing.Point(304, 165);
@@ -94,6 +95,7 @@ namespace PatientManagementSystem
             // 
             // TxtBxPassword
             // 
+            this.TxtBxPassword.BackColor = System.Drawing.SystemColors.Info;
             this.TxtBxPassword.Dock = System.Windows.Forms.DockStyle.Top;
             this.TxtBxPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TxtBxPassword.Location = new System.Drawing.Point(304, 207);
@@ -104,9 +106,11 @@ namespace PatientManagementSystem
             // 
             // BtnLogin
             // 
-            this.BtnLogin.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.BtnLogin.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.TlpMain.SetColumnSpan(this.BtnLogin, 2);
             this.BtnLogin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnLogin.FlatAppearance.BorderSize = 0;
+            this.BtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnLogin.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnLogin.Location = new System.Drawing.Point(170, 278);
             this.BtnLogin.Name = "BtnLogin";

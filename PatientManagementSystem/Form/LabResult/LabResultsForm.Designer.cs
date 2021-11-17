@@ -31,11 +31,11 @@ namespace PatientManagementSystem
         {
             this.TlpMain = new System.Windows.Forms.TableLayoutPanel();
             this.BtnSearch = new System.Windows.Forms.Button();
-            this.TxtBxPatientIdentification = new System.Windows.Forms.MaskedTextBox();
             this.DgvLabResults = new System.Windows.Forms.DataGridView();
             this.BtnReportResult = new System.Windows.Forms.Button();
             this.BtnBack = new System.Windows.Forms.Button();
             this.TlpSearch = new System.Windows.Forms.TableLayoutPanel();
+            this.TxtBxPatientIdentification = new System.Windows.Forms.MaskedTextBox();
             this.LblPatientIdentification = new System.Windows.Forms.Label();
             this.TlpMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvLabResults)).BeginInit();
@@ -70,6 +70,8 @@ namespace PatientManagementSystem
             // 
             this.BtnSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.BtnSearch.BackColor = System.Drawing.Color.LightGreen;
+            this.BtnSearch.FlatAppearance.BorderSize = 0;
+            this.BtnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnSearch.Location = new System.Drawing.Point(340, 29);
             this.BtnSearch.Name = "BtnSearch";
@@ -79,20 +81,11 @@ namespace PatientManagementSystem
             this.BtnSearch.UseVisualStyleBackColor = false;
             this.BtnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
             // 
-            // TxtBxPatientIdentification
-            // 
-            this.TxtBxPatientIdentification.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.TxtBxPatientIdentification.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.TxtBxPatientIdentification.Location = new System.Drawing.Point(125, 27);
-            this.TxtBxPatientIdentification.Mask = "000-0000000-0";
-            this.TxtBxPatientIdentification.Name = "TxtBxPatientIdentification";
-            this.TxtBxPatientIdentification.Size = new System.Drawing.Size(136, 29);
-            this.TxtBxPatientIdentification.TabIndex = 2;
-            // 
             // DgvLabResults
             // 
             this.DgvLabResults.AllowUserToAddRows = false;
             this.DgvLabResults.AllowUserToDeleteRows = false;
+            this.DgvLabResults.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DgvLabResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TlpMain.SetColumnSpan(this.DgvLabResults, 2);
             this.DgvLabResults.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -111,6 +104,8 @@ namespace PatientManagementSystem
             this.BtnReportResult.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BtnReportResult.BackColor = System.Drawing.Color.SandyBrown;
             this.TlpMain.SetColumnSpan(this.BtnReportResult, 2);
+            this.BtnReportResult.FlatAppearance.BorderSize = 0;
+            this.BtnReportResult.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnReportResult.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnReportResult.Location = new System.Drawing.Point(276, 273);
             this.BtnReportResult.Name = "BtnReportResult";
@@ -123,14 +118,17 @@ namespace PatientManagementSystem
             // BtnBack
             // 
             this.BtnBack.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.BtnBack.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.TlpMain.SetColumnSpan(this.BtnBack, 2);
+            this.BtnBack.FlatAppearance.BorderSize = 0;
+            this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBack.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnBack.Location = new System.Drawing.Point(299, 363);
             this.BtnBack.Name = "BtnBack";
             this.BtnBack.Size = new System.Drawing.Size(75, 32);
             this.BtnBack.TabIndex = 5;
             this.BtnBack.Text = "Back";
-            this.BtnBack.UseVisualStyleBackColor = true;
+            this.BtnBack.UseVisualStyleBackColor = false;
             this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // TlpSearch
@@ -145,9 +143,20 @@ namespace PatientManagementSystem
             this.TlpSearch.Name = "TlpSearch";
             this.TlpSearch.RowCount = 1;
             this.TlpSearch.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TlpSearch.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.TlpSearch.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 84F));
             this.TlpSearch.Size = new System.Drawing.Size(264, 84);
             this.TlpSearch.TabIndex = 6;
+            // 
+            // TxtBxPatientIdentification
+            // 
+            this.TxtBxPatientIdentification.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtBxPatientIdentification.BackColor = System.Drawing.SystemColors.Info;
+            this.TxtBxPatientIdentification.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.TxtBxPatientIdentification.Location = new System.Drawing.Point(125, 27);
+            this.TxtBxPatientIdentification.Mask = "000-0000000-0";
+            this.TxtBxPatientIdentification.Name = "TxtBxPatientIdentification";
+            this.TxtBxPatientIdentification.Size = new System.Drawing.Size(136, 29);
+            this.TxtBxPatientIdentification.TabIndex = 2;
             // 
             // LblPatientIdentification
             // 

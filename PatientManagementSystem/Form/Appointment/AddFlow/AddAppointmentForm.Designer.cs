@@ -135,6 +135,7 @@ namespace PatientManagementSystem
             // 
             // TxtBxPatient
             // 
+            this.TxtBxPatient.BackColor = System.Drawing.SystemColors.Info;
             this.TxtBxPatient.Dock = System.Windows.Forms.DockStyle.Top;
             this.TxtBxPatient.Enabled = false;
             this.TxtBxPatient.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -145,6 +146,7 @@ namespace PatientManagementSystem
             // 
             // TxtBxDoctor
             // 
+            this.TxtBxDoctor.BackColor = System.Drawing.SystemColors.Info;
             this.TxtBxDoctor.Dock = System.Windows.Forms.DockStyle.Top;
             this.TxtBxDoctor.Enabled = false;
             this.TxtBxDoctor.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -155,6 +157,7 @@ namespace PatientManagementSystem
             // 
             // TxtBxAppointmentDate
             // 
+            this.TxtBxAppointmentDate.BackColor = System.Drawing.SystemColors.Info;
             this.TxtBxAppointmentDate.Dock = System.Windows.Forms.DockStyle.Top;
             this.TxtBxAppointmentDate.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TxtBxAppointmentDate.Location = new System.Drawing.Point(339, 195);
@@ -166,6 +169,7 @@ namespace PatientManagementSystem
             // 
             // TxtBxAppointmentTime
             // 
+            this.TxtBxAppointmentTime.BackColor = System.Drawing.SystemColors.Info;
             this.TxtBxAppointmentTime.Dock = System.Windows.Forms.DockStyle.Top;
             this.TxtBxAppointmentTime.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TxtBxAppointmentTime.Location = new System.Drawing.Point(339, 259);
@@ -177,6 +181,7 @@ namespace PatientManagementSystem
             // 
             // TxtBxCause
             // 
+            this.TxtBxCause.BackColor = System.Drawing.SystemColors.Info;
             this.TxtBxCause.Dock = System.Windows.Forms.DockStyle.Top;
             this.TxtBxCause.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TxtBxCause.Location = new System.Drawing.Point(339, 323);
@@ -186,19 +191,24 @@ namespace PatientManagementSystem
             // 
             // BtnBack
             // 
+            this.BtnBack.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BtnBack.FlatAppearance.BorderSize = 0;
+            this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBack.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnBack.Location = new System.Drawing.Point(104, 387);
             this.BtnBack.Name = "BtnBack";
             this.BtnBack.Size = new System.Drawing.Size(75, 30);
             this.BtnBack.TabIndex = 10;
             this.BtnBack.Text = "Back";
-            this.BtnBack.UseVisualStyleBackColor = true;
+            this.BtnBack.UseVisualStyleBackColor = false;
             this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // BtnCreate
             // 
             this.BtnCreate.BackColor = System.Drawing.Color.LightGreen;
             this.BtnCreate.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnCreate.FlatAppearance.BorderSize = 0;
+            this.BtnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCreate.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnCreate.Location = new System.Drawing.Point(339, 387);
             this.BtnCreate.Name = "BtnCreate";

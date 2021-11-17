@@ -63,6 +63,7 @@ namespace PatientManagementSystem
             // 
             this.DgvLabTests.AllowUserToAddRows = false;
             this.DgvLabTests.AllowUserToDeleteRows = false;
+            this.DgvLabTests.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DgvLabTests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TlpMain.SetColumnSpan(this.DgvLabTests, 2);
             this.DgvLabTests.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -79,6 +80,8 @@ namespace PatientManagementSystem
             // 
             this.BtnRunTests.BackColor = System.Drawing.Color.LightGreen;
             this.BtnRunTests.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnRunTests.FlatAppearance.BorderSize = 0;
+            this.BtnRunTests.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnRunTests.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnRunTests.Location = new System.Drawing.Point(103, 273);
             this.BtnRunTests.Name = "BtnRunTests";
@@ -92,6 +95,8 @@ namespace PatientManagementSystem
             // 
             this.BtnCancel.BackColor = System.Drawing.Color.IndianRed;
             this.BtnCancel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnCancel.FlatAppearance.BorderSize = 0;
+            this.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnCancel.Location = new System.Drawing.Point(338, 273);
             this.BtnCancel.Name = "BtnCancel";

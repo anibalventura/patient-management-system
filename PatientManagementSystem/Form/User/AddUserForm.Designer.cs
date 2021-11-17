@@ -167,6 +167,7 @@ namespace PatientManagementSystem
             // 
             // TxtBxName
             // 
+            this.TxtBxName.BackColor = System.Drawing.SystemColors.Info;
             this.TxtBxName.Dock = System.Windows.Forms.DockStyle.Top;
             this.TxtBxName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TxtBxName.Location = new System.Drawing.Point(339, 53);
@@ -176,6 +177,7 @@ namespace PatientManagementSystem
             // 
             // TxtBxLastName
             // 
+            this.TxtBxLastName.BackColor = System.Drawing.SystemColors.Info;
             this.TxtBxLastName.Dock = System.Windows.Forms.DockStyle.Top;
             this.TxtBxLastName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TxtBxLastName.Location = new System.Drawing.Point(339, 103);
@@ -185,6 +187,7 @@ namespace PatientManagementSystem
             // 
             // TxtBxEmail
             // 
+            this.TxtBxEmail.BackColor = System.Drawing.SystemColors.Info;
             this.TxtBxEmail.Dock = System.Windows.Forms.DockStyle.Top;
             this.TxtBxEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TxtBxEmail.Location = new System.Drawing.Point(339, 153);
@@ -194,6 +197,7 @@ namespace PatientManagementSystem
             // 
             // TxtBxUsername
             // 
+            this.TxtBxUsername.BackColor = System.Drawing.SystemColors.Info;
             this.TxtBxUsername.Dock = System.Windows.Forms.DockStyle.Top;
             this.TxtBxUsername.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TxtBxUsername.Location = new System.Drawing.Point(339, 203);
@@ -203,6 +207,7 @@ namespace PatientManagementSystem
             // 
             // TxtBxPassword
             // 
+            this.TxtBxPassword.BackColor = System.Drawing.SystemColors.Info;
             this.TxtBxPassword.Dock = System.Windows.Forms.DockStyle.Top;
             this.TxtBxPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TxtBxPassword.Location = new System.Drawing.Point(339, 253);
@@ -213,6 +218,7 @@ namespace PatientManagementSystem
             // 
             // TxtBxConfirmPassword
             // 
+            this.TxtBxConfirmPassword.BackColor = System.Drawing.SystemColors.Info;
             this.TxtBxConfirmPassword.Dock = System.Windows.Forms.DockStyle.Top;
             this.TxtBxConfirmPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TxtBxConfirmPassword.Location = new System.Drawing.Point(339, 303);
@@ -223,6 +229,7 @@ namespace PatientManagementSystem
             // 
             // CbxUserType
             // 
+            this.CbxUserType.BackColor = System.Drawing.SystemColors.Info;
             this.CbxUserType.Dock = System.Windows.Forms.DockStyle.Top;
             this.CbxUserType.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.CbxUserType.FormattingEnabled = true;
@@ -235,6 +242,8 @@ namespace PatientManagementSystem
             // 
             this.BtnSave.BackColor = System.Drawing.Color.LightGreen;
             this.BtnSave.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnSave.FlatAppearance.BorderSize = 0;
+            this.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSave.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnSave.Location = new System.Drawing.Point(171, 403);
             this.BtnSave.Name = "BtnSave";
@@ -248,6 +257,8 @@ namespace PatientManagementSystem
             // 
             this.BtnCancel.BackColor = System.Drawing.Color.IndianRed;
             this.BtnCancel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnCancel.FlatAppearance.BorderSize = 0;
+            this.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnCancel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.BtnCancel.Location = new System.Drawing.Point(339, 403);

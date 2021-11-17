@@ -31,9 +31,9 @@ namespace PatientManagementSystem
         {
             this.TlpMain = new System.Windows.Forms.TableLayoutPanel();
             this.TlpSearch = new System.Windows.Forms.TableLayoutPanel();
-            this.LblTitle = new System.Windows.Forms.Label();
             this.LblDoctorIdentification = new System.Windows.Forms.Label();
             this.TxtBxDoctorIdentification = new System.Windows.Forms.MaskedTextBox();
+            this.LblTitle = new System.Windows.Forms.Label();
             this.BtnSearch = new System.Windows.Forms.Button();
             this.DgvDoctors = new System.Windows.Forms.DataGridView();
             this.BtnBack = new System.Windows.Forms.Button();
@@ -80,21 +80,9 @@ namespace PatientManagementSystem
             this.TlpSearch.Name = "TlpSearch";
             this.TlpSearch.RowCount = 1;
             this.TlpSearch.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TlpSearch.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.TlpSearch.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 84F));
             this.TlpSearch.Size = new System.Drawing.Size(230, 84);
             this.TlpSearch.TabIndex = 0;
-            // 
-            // LblTitle
-            // 
-            this.LblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.LblTitle.AutoSize = true;
-            this.TlpMain.SetColumnSpan(this.LblTitle, 2);
-            this.LblTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblTitle.Location = new System.Drawing.Point(267, 32);
-            this.LblTitle.Name = "LblTitle";
-            this.LblTitle.Size = new System.Drawing.Size(139, 25);
-            this.LblTitle.TabIndex = 1;
-            this.LblTitle.Text = "Select a doctor";
             // 
             // LblDoctorIdentification
             // 
@@ -110,6 +98,7 @@ namespace PatientManagementSystem
             // TxtBxDoctorIdentification
             // 
             this.TxtBxDoctorIdentification.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtBxDoctorIdentification.BackColor = System.Drawing.SystemColors.Info;
             this.TxtBxDoctorIdentification.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TxtBxDoctorIdentification.Location = new System.Drawing.Point(113, 27);
             this.TxtBxDoctorIdentification.Mask = "000-0000000-0";
@@ -117,10 +106,24 @@ namespace PatientManagementSystem
             this.TxtBxDoctorIdentification.Size = new System.Drawing.Size(114, 29);
             this.TxtBxDoctorIdentification.TabIndex = 1;
             // 
+            // LblTitle
+            // 
+            this.LblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.LblTitle.AutoSize = true;
+            this.TlpMain.SetColumnSpan(this.LblTitle, 2);
+            this.LblTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LblTitle.Location = new System.Drawing.Point(267, 32);
+            this.LblTitle.Name = "LblTitle";
+            this.LblTitle.Size = new System.Drawing.Size(139, 25);
+            this.LblTitle.TabIndex = 1;
+            this.LblTitle.Text = "Select a doctor";
+            // 
             // BtnSearch
             // 
             this.BtnSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.BtnSearch.BackColor = System.Drawing.Color.LightGreen;
+            this.BtnSearch.FlatAppearance.BorderSize = 0;
+            this.BtnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnSearch.Location = new System.Drawing.Point(340, 120);
             this.BtnSearch.Name = "BtnSearch";
@@ -134,6 +137,7 @@ namespace PatientManagementSystem
             // 
             this.DgvDoctors.AllowUserToAddRows = false;
             this.DgvDoctors.AllowUserToDeleteRows = false;
+            this.DgvDoctors.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DgvDoctors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TlpMain.SetColumnSpan(this.DgvDoctors, 2);
             this.DgvDoctors.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -150,25 +154,31 @@ namespace PatientManagementSystem
             // BtnBack
             // 
             this.BtnBack.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.BtnBack.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BtnBack.FlatAppearance.BorderSize = 0;
+            this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBack.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnBack.Location = new System.Drawing.Point(104, 390);
             this.BtnBack.Name = "BtnBack";
             this.BtnBack.Size = new System.Drawing.Size(75, 29);
             this.BtnBack.TabIndex = 4;
             this.BtnBack.Text = "Back";
-            this.BtnBack.UseVisualStyleBackColor = true;
+            this.BtnBack.UseVisualStyleBackColor = false;
             this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // BtnNext
             // 
             this.BtnNext.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.BtnNext.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BtnNext.FlatAppearance.BorderSize = 0;
+            this.BtnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnNext.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnNext.Location = new System.Drawing.Point(495, 390);
             this.BtnNext.Name = "BtnNext";
             this.BtnNext.Size = new System.Drawing.Size(75, 29);
             this.BtnNext.TabIndex = 5;
             this.BtnNext.Text = "Next";
-            this.BtnNext.UseVisualStyleBackColor = true;
+            this.BtnNext.UseVisualStyleBackColor = false;
             this.BtnNext.Click += new System.EventHandler(this.BtnNext_Click);
             // 
             // SelectDoctorAptForm

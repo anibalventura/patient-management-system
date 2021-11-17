@@ -63,7 +63,7 @@ namespace PatientManagementSystem
             this.LblTestName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LblTestName.AutoSize = true;
             this.LblTestName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblTestName.Location = new System.Drawing.Point(250, 184);
+            this.LblTestName.Location = new System.Drawing.Point(250, 183);
             this.LblTestName.Name = "LblTestName";
             this.LblTestName.Size = new System.Drawing.Size(83, 21);
             this.LblTestName.TabIndex = 0;
@@ -71,9 +71,10 @@ namespace PatientManagementSystem
             // 
             // TxtBxTestName
             // 
+            this.TxtBxTestName.BackColor = System.Drawing.SystemColors.Info;
             this.TxtBxTestName.Dock = System.Windows.Forms.DockStyle.Top;
             this.TxtBxTestName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.TxtBxTestName.Location = new System.Drawing.Point(339, 187);
+            this.TxtBxTestName.Location = new System.Drawing.Point(339, 186);
             this.TxtBxTestName.Name = "TxtBxTestName";
             this.TxtBxTestName.Size = new System.Drawing.Size(162, 29);
             this.TxtBxTestName.TabIndex = 1;
@@ -82,8 +83,10 @@ namespace PatientManagementSystem
             // 
             this.BtnSave.BackColor = System.Drawing.Color.LightGreen;
             this.BtnSave.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnSave.FlatAppearance.BorderSize = 0;
+            this.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSave.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnSave.Location = new System.Drawing.Point(171, 257);
+            this.BtnSave.Location = new System.Drawing.Point(171, 256);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(162, 32);
             this.BtnSave.TabIndex = 2;
@@ -95,8 +98,10 @@ namespace PatientManagementSystem
             // 
             this.BtnCancel.BackColor = System.Drawing.Color.IndianRed;
             this.BtnCancel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnCancel.FlatAppearance.BorderSize = 0;
+            this.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnCancel.Location = new System.Drawing.Point(339, 257);
+            this.BtnCancel.Location = new System.Drawing.Point(339, 256);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(162, 32);
             this.BtnCancel.TabIndex = 3;
