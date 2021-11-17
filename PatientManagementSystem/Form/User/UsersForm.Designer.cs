@@ -81,6 +81,7 @@ namespace PatientManagementSystem
             this.DgvUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvUsers.Size = new System.Drawing.Size(464, 198);
             this.DgvUsers.TabIndex = 0;
+            this.DgvUsers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvUsers_CellClick);
             // 
             // BtnEdit
             // 
