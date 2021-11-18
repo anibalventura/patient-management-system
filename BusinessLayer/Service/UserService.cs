@@ -8,46 +8,46 @@ namespace BusinessLayer.Service
 {
     public class UserService: IService<User>
     {
-        private UserRepository userRepository;
+        private UserRepository _userRepository;
 
         public UserService(SqlConnection connection)
         {
-            userRepository = new UserRepository(connection);
+            _userRepository = new UserRepository(connection);
         }
 
         public bool Add(User user)
         {
-            return userRepository.Add(user);
+            return _userRepository.Add(user);
         }
 
         public bool Edit(User user)
         {
-            return userRepository.Edit(user);
+            return _userRepository.Edit(user);
         }
 
         public bool Delete(int userId)
         {
-            return userRepository.Delete(userId);
-        }
-
-        public DataTable GetAll()
-        {
-            return userRepository.GetAll();
+            return _userRepository.Delete(userId);
         }
 
         public User GetById(int userId)
         {
-            return userRepository.GetById(userId);
+            return _userRepository.GetById(userId);
+        }
+
+        public DataTable GetAll()
+        {
+            return _userRepository.GetAll();
         }
 
         public bool CheckUsername(string username)
         {
-            return userRepository.CheckUsername(username);
+            return _userRepository.CheckUsername(username);
         }
 
         public User GetLogin(string username, string password)
         {
-            return userRepository.GetLogin(username, password);
+            return _userRepository.GetLogin(username, password);
         }
     }
 }

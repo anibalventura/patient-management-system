@@ -5,7 +5,7 @@ using Database.Model;
 
 namespace Database.Repository
 {
-    public class UserRepository : Database.BaseRepository, IRepository<User>
+    public class UserRepository : BaseRepository, IRepository<User>
     {
         public UserRepository(SqlConnection connection) : base(connection) { }
 
