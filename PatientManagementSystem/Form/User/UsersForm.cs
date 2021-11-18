@@ -39,11 +39,15 @@ namespace PatientManagementSystem
         private void UsersForm_Load(object sender, EventArgs e)
         {
             LoadUsers();
+
+            UserRepository.Instance.IdSelectedUser = null;
         }
 
         private void UsersForm_VisibleChanged(object sender, EventArgs e)
         {
             LoadUsers();
+
+            UserRepository.Instance.IdSelectedUser = null;
         }
 
         private void UsersForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -150,6 +154,8 @@ namespace PatientManagementSystem
 
         private void CloseForm()
         {
+            UserRepository.Instance.IdSelectedUser = null;
+
             HomeForm.Instance.Show();
             this.Hide();
         }

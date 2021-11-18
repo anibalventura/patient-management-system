@@ -1,6 +1,7 @@
 ﻿using BusinessLayer.Repository;
 using BusinessLayer.Service;
 using Database.Model;
+using EmailHandler;
 using PatientManagementSystem.CustomControlItem;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ namespace PatientManagementSystem
     {
         private UserService _userService;
         private UserTypeService _userTypeService;
+        private EmailSender _emailSender;
 
         public AddUserForm()
         {
@@ -24,6 +26,9 @@ namespace PatientManagementSystem
             SqlConnection connection = new SqlConnection(connectionString);
             _userService = new UserService(connection);
             _userTypeService = new UserTypeService(connection);
+
+            // Init Email Handler.
+            _emailSender = new EmailSender();
         }
 
         // Disable window close button.
@@ -141,6 +146,8 @@ namespace PatientManagementSystem
 
                 if (result)
                 {
+                    SendEmailNewUser(newUser);
+
                     DialogResult response = MessageBox.Show("User created successfully.", "Notification!",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -155,6 +162,21 @@ namespace PatientManagementSystem
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void SendEmailNewUser(User user)
+        {
+            string subject = "Welcome to Patient Management System! - Login Details";
+            string body = $@"Hi {user.Name} {user.LastName},
+
+             Welcome to Patient Management System. Please find your login details below.
+
+             - Username: {user.Username}
+             - Password: {user.Password}
+                
+             Thank you!";
+
+            _emailSender.SendEmail(user.Email, subject, body);
         }
 
         private void LoadUserToEdit()

@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj" />
+    <ProjectReference Include="..\EmailHandler\EmailHandler.csproj" />
   </ItemGroup>
 
 </Project>
