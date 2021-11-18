@@ -46,8 +46,6 @@ namespace PatientManagementSystem
         private void UsersForm_VisibleChanged(object sender, EventArgs e)
         {
             LoadUsers();
-
-            UserRepository.Instance.IdSelectedUser = null;
         }
 
         private void UsersForm_FormClosed(object sender, FormClosedEventArgs e)
