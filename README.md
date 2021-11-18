@@ -9,6 +9,7 @@
 ## Dependencies
 
 - [System.Data.SqlClient - Version 4.8.3](https://www.nuget.org/packages/System.Data.SqlClient)
+- [System.Configuration.ConfigurationManager - Version 6.0.0](https://www.nuget.org/packages/System.Configuration.ConfigurationManager/)
 
 ## Build
 
