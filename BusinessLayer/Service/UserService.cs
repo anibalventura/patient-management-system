@@ -25,9 +25,9 @@ namespace BusinessLayer.Service
             return userRepository.Edit(user);
         }
 
-        public bool Delete(int id)
+        public bool Delete(int userId)
         {
-            return userRepository.Delete(id);
+            return userRepository.Delete(userId);
         }
 
         public DataTable GetAll()
@@ -35,9 +35,9 @@ namespace BusinessLayer.Service
             return userRepository.GetAll();
         }
 
-        public User GetById(int id)
+        public User GetById(int userId)
         {
-            return userRepository.GetById(id);
+            return userRepository.GetById(userId);
         }
 
         public bool CheckUsername(string username)

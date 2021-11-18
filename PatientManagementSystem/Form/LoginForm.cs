@@ -36,14 +36,14 @@ namespace PatientManagementSystem
 
         private void LoginUser()
         {
-            string username = TxtBxUsername.Text;
-            string password = TxtBxPassword.Text;
+            string inputUsername = TxtBxUsername.Text;
+            string inputPassword = TxtBxPassword.Text;
 
-            User user = _userService.GetLogin(username, password);
+            User userData = _userService.GetLogin(inputUsername, inputPassword);
 
-            if (user.Username == username && user.Password == password)
+            if (userData.Username == inputUsername && userData.Password == inputPassword)
             {
-                LoginRepository.Instance.IdLogedUserType = user.IdUserType;
+                LoginRepository.Instance.IdLogedUserType = userData.IdUserType;
 
                 HomeForm newHomeForm = new HomeForm();
                 newHomeForm.Show();
@@ -51,13 +51,15 @@ namespace PatientManagementSystem
 
                 ClearForm();
             }
-            else if (String.IsNullOrEmpty(username) || String.IsNullOrEmpty(password))
+            else if (String.IsNullOrEmpty(inputUsername) || String.IsNullOrEmpty(inputPassword))
             {
-                MessageBox.Show("Please complete all fields to login.", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please complete all fields to login.", "Warning!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                MessageBox.Show("Username or password are incorrect.", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Username or password are incorrect.", "Warning!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

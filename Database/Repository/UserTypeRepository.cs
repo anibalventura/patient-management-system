@@ -13,14 +13,14 @@ namespace Database.Repository
         {
             try
             {
-                List<UserType> list = new List<UserType>();
-
                 GetConnection().Open();
 
-                SqlCommand command = new SqlCommand("select Id,Name from UserType", GetConnection());
+                string sqlQuery = "select Id,Name from UserType";
+                SqlCommand command = new SqlCommand(sqlQuery, GetConnection());
 
                 SqlDataReader reader = command.ExecuteReader();
 
+                List<UserType> list = new List<UserType>();
                 while (reader.Read())
                 {
                     list.Add(new UserType
@@ -32,7 +32,6 @@ namespace Database.Repository
 
                 reader.Close();
                 reader.Dispose();
-
                 GetConnection().Close();
 
                 return list;

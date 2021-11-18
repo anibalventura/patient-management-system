@@ -11,7 +11,8 @@ namespace Database.Repository
 
         public bool Add(User user)
         {
-            SqlCommand command = new SqlCommand("insert into Users(Name,LastName,Email,Username,Password,IdUserType) values(@name,@lastname,@email,@username,@password,@idusertype)", GetConnection());
+            string sqlQuery = "insert into Users(Name,LastName,Email,Username,Password,IdUserType) values(@name,@lastname,@email,@username,@password,@idusertype)";
+            SqlCommand command = new SqlCommand(sqlQuery, GetConnection());
 
             command.Parameters.AddWithValue("@name", user.Name);
             command.Parameters.AddWithValue("@lastname", user.LastName);
@@ -25,7 +26,8 @@ namespace Database.Repository
 
         public bool Edit(User user)
         {
-            SqlCommand command = new SqlCommand("update Users set Name=@name,LastName=@lastname,Email=@email,Username=@username,Password=@password,IdUserType=@idusertype where Id = @id", GetConnection());
+            string sqlQuery = "update Users set Name=@name,LastName=@lastname,Email=@email,Username=@username,Password=@password,IdUserType=@idusertype where Id = @id";
+            SqlCommand command = new SqlCommand(sqlQuery, GetConnection());
 
             command.Parameters.AddWithValue("@name", user.Name);
             command.Parameters.AddWithValue("@lastname", user.LastName);
@@ -38,29 +40,30 @@ namespace Database.Repository
             return ExecuteDml(command);
         }
 
-        public bool Delete(int id)
+        public bool Delete(int userId)
         {
-            SqlCommand command = new SqlCommand("delete Users where Id = @id", GetConnection());
+            string sqlQuery = "delete Users where Id = @id";
+            SqlCommand command = new SqlCommand(sqlQuery, GetConnection());
 
-            command.Parameters.AddWithValue("@id", id);
+            command.Parameters.AddWithValue("@id", userId);
 
             return ExecuteDml(command);
         }
 
-        public User GetById(int id)
+        public User GetById(int userId)
         {
             try
             {
                 GetConnection().Open();
 
-                SqlCommand command = new SqlCommand("select u.Id,u.Name,u.LastName,u.Email,u.Username,u.Password,ut.Name from Users u inner join UserType ut on u.IdUserType = ut.Id where u.Id = @id", GetConnection());
+                string sqlQuery = "select u.Id,u.Name,u.LastName,u.Email,u.Username,u.Password,ut.Name from Users u inner join UserType ut on u.IdUserType = ut.Id where u.Id = @id";
+                SqlCommand command = new SqlCommand(sqlQuery, GetConnection());
 
-                command.Parameters.AddWithValue("@id", id);
+                command.Parameters.AddWithValue("@id", userId);
 
                 SqlDataReader reader = command.ExecuteReader();
 
                 User data = new User();
-
                 while (reader.Read())
                 {
                     data.Id = reader.IsDBNull(0) ? 0 : reader.GetInt32(0);
@@ -86,8 +89,9 @@ namespace Database.Repository
 
         public DataTable GetAll()
         {
-            SqlDataAdapter query = new SqlDataAdapter("select u.Id as 'Code',u.Name as 'Name',u.LastName as 'Last name',u.Email,u.Username, ut.Name as 'User type' from Users u inner join UserType ut on u.IdUserType = ut.Id", GetConnection());
-            return LoadData(query);
+            string sqlQuery = "select u.Id as 'Code',u.Name as 'Name',u.LastName as 'Last name',u.Email,u.Username, ut.Name as 'User type' from Users u inner join UserType ut on u.IdUserType = ut.Id";
+            SqlDataAdapter adapter = new SqlDataAdapter(sqlQuery, GetConnection());
+            return LoadData(adapter);
         }
 
         public bool CheckUsername(string username)
@@ -96,14 +100,14 @@ namespace Database.Repository
             {
                 GetConnection().Open();
 
-                SqlCommand command = new SqlCommand("select u.Username from Users u where u.Username = @username", GetConnection());
+                string sqlQuery = "select u.Username from Users u where u.Username = @username";
+                SqlCommand command = new SqlCommand(sqlQuery, GetConnection());
 
                 command.Parameters.AddWithValue("@username", username);
 
                 SqlDataReader reader = command.ExecuteReader();
 
                 string usernameDB = "";
-
                 while (reader.Read())
                 {
                     usernameDB = reader.IsDBNull(0) ? "" : reader.GetString(0);
@@ -134,7 +138,8 @@ namespace Database.Repository
             {
                 GetConnection().Open();
 
-                SqlCommand command = new SqlCommand("select u.Id,u.Name,u.LastName,u.Email,u.Username,u.Password,u.IdUserType from Users u where u.Username = @username and u.Password = @password", GetConnection());
+                string sqlQuery = "select u.Id,u.Name,u.LastName,u.Email,u.Username,u.Password,u.IdUserType from Users u where u.Username = @username and u.Password = @password";
+                SqlCommand command = new SqlCommand(sqlQuery, GetConnection());
 
                 command.Parameters.AddWithValue("@username", username);
                 command.Parameters.AddWithValue("@password", password);
@@ -142,7 +147,6 @@ namespace Database.Repository
                 SqlDataReader reader = command.ExecuteReader();
 
                 User data = new User();
-
                 while (reader.Read())
                 {
                     data.Id = reader.IsDBNull(0) ? 0 : reader.GetInt32(0);

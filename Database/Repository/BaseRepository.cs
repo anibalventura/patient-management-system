@@ -43,7 +43,6 @@ namespace Database
                 query.Fill(data);
                 _connection.Close();
 
-
                 return data;
             }
             catch (Exception e)

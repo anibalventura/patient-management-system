@@ -115,8 +115,8 @@ namespace PatientManagementSystem
         {
             if (UserRepository.Instance.IdSelectedUser != null)
             {
-                DialogResult response = MessageBox.Show("Are you sure you want to delete this user?",
-                    "Warning!", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                DialogResult response = MessageBox.Show("Are you sure you want to delete this user?", "Warning!",
+                    MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
 
                 if (response == DialogResult.OK)
                 {
