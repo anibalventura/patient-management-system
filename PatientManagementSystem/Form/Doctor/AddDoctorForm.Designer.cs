@@ -44,6 +44,8 @@ namespace PatientManagementSystem
             this.BtnSave = new System.Windows.Forms.Button();
             this.TxtBxIdentification = new System.Windows.Forms.MaskedTextBox();
             this.PbDoctor = new System.Windows.Forms.PictureBox();
+            this.LblProfilePhoto = new System.Windows.Forms.Label();
+            this.PhotoDialog = new System.Windows.Forms.OpenFileDialog();
             this.TlpMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbDoctor)).BeginInit();
             this.SuspendLayout();
@@ -71,6 +73,7 @@ namespace PatientManagementSystem
             this.TlpMain.Controls.Add(this.BtnSave, 3, 6);
             this.TlpMain.Controls.Add(this.TxtBxIdentification, 4, 5);
             this.TlpMain.Controls.Add(this.PbDoctor, 1, 1);
+            this.TlpMain.Controls.Add(this.LblProfilePhoto, 1, 0);
             this.TlpMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TlpMain.Location = new System.Drawing.Point(0, 0);
             this.TlpMain.Name = "TlpMain";
@@ -245,8 +248,20 @@ namespace PatientManagementSystem
             this.PbDoctor.Name = "PbDoctor";
             this.TlpMain.SetRowSpan(this.PbDoctor, 3);
             this.PbDoctor.Size = new System.Drawing.Size(159, 114);
+            this.PbDoctor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PbDoctor.TabIndex = 12;
             this.PbDoctor.TabStop = false;
+            // 
+            // LblProfilePhoto
+            // 
+            this.LblProfilePhoto.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.LblProfilePhoto.AutoSize = true;
+            this.LblProfilePhoto.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LblProfilePhoto.Location = new System.Drawing.Point(96, 75);
+            this.LblProfilePhoto.Name = "LblProfilePhoto";
+            this.LblProfilePhoto.Size = new System.Drawing.Size(107, 21);
+            this.LblProfilePhoto.TabIndex = 15;
+            this.LblProfilePhoto.Text = "Profile photo";
             // 
             // AddDoctorForm
             // 
@@ -284,5 +299,7 @@ namespace PatientManagementSystem
         private System.Windows.Forms.PictureBox PbDoctor;
         private System.Windows.Forms.Button BtnSelectPhoto;
         private System.Windows.Forms.MaskedTextBox TxtBxIdentification;
+        private System.Windows.Forms.Label LblProfilePhoto;
+        private System.Windows.Forms.OpenFileDialog PhotoDialog;
     }
 }
