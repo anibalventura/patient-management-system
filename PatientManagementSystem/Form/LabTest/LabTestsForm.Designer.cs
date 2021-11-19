@@ -126,6 +126,7 @@ namespace PatientManagementSystem
             this.DgvLabTests.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvLabTests.Size = new System.Drawing.Size(466, 198);
             this.DgvLabTests.TabIndex = 3;
+            this.DgvLabTests.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvLabTests_CellClick);
             // 
             // BtnBack
             // 
