@@ -93,6 +93,8 @@ namespace PatientManagementSystem
 
         private void AddDoctor()
         {
+            DoctorRepository.Instance.IdSelectedDoctor = null;
+
             AddDoctorForm newAddDoctorForm = new AddDoctorForm();
             newAddDoctorForm.Show();
             this.Hide();

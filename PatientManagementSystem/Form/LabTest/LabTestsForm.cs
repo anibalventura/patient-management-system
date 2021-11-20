@@ -93,6 +93,8 @@ namespace PatientManagementSystem
 
         private void AddLabTest()
         {
+            LabTestRepository.Instance.IdSelectedLabTest = null;
+
             AddLabTestForm newAddLabTestForm = new AddLabTestForm();
             newAddLabTestForm.Show();
             this.Hide();

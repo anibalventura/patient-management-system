@@ -93,6 +93,8 @@ namespace PatientManagementSystem
 
         private void AddPatient()
         {
+            PatientRepository.Instance.IdSelectedPatient = null;
+
             AddPatientForm newAddPatientForm = new AddPatientForm();
             newAddPatientForm.Show();
             this.Hide();
