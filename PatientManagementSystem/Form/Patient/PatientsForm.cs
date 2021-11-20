@@ -1,4 +1,8 @@
-﻿using System;
+﻿using BusinessLayer.Repository;
+using BusinessLayer.Service;
+using System;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace PatientManagementSystem
@@ -7,9 +11,16 @@ namespace PatientManagementSystem
     {
         public static PatientsForm Instance { get; } = new PatientsForm();
 
+        private PatientService _patientService;
+
         public PatientsForm()
         {
             InitializeComponent();
+
+            // Init SQL connection.
+            string connectionString = ConfigurationManager.ConnectionStrings["Default"].ConnectionString;
+            SqlConnection connection = new SqlConnection(connectionString);
+            _patientService = new PatientService(connection);
         }
 
         // Disable window close button.
@@ -28,6 +39,8 @@ namespace PatientManagementSystem
         private void PatientsForm_Load(object sender, EventArgs e)
         {
             LoadPatients();
+
+            PatientRepository.Instance.IdSelectedPatient = null; 
         }
 
         private void PatientsForm_VisibleChanged(object sender, EventArgs e)
@@ -43,6 +56,14 @@ namespace PatientManagementSystem
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             AddPatient();
+        }
+
+        private void DgvPatients_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                PatientRepository.Instance.IdSelectedPatient = Convert.ToInt32(DgvPatients.Rows[e.RowIndex].Cells[0].Value.ToString());
+            }
         }
 
         private void BtnEdit_Click(object sender, EventArgs e)
@@ -66,7 +87,8 @@ namespace PatientManagementSystem
 
         private void LoadPatients()
         {
-
+            DgvPatients.DataSource = _patientService.GetAll();
+            DgvPatients.ClearSelection();
         }
 
         private void AddPatient()
@@ -78,18 +100,60 @@ namespace PatientManagementSystem
 
         private void EditPatient()
         {
-            AddPatientForm newAddPatientForm = new AddPatientForm();
-            newAddPatientForm.Show();
-            this.Hide();
+            if (PatientRepository.Instance.IdSelectedPatient != null)
+            {
+                AddPatientForm newAddPatientForm = new AddPatientForm();
+                newAddPatientForm.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Please select a patient.", "Warning!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void DeletePatient()
         {
+            if (PatientRepository.Instance.IdSelectedPatient != null)
+            {
+                DialogResult response = MessageBox.Show("Are you sure you want to delete this patient?", "Warning!",
+                    MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
 
+                if (response == DialogResult.OK)
+                {
+                    bool result = _patientService.Delete((int)PatientRepository.Instance.IdSelectedPatient);
+
+                    if (result)
+                    {
+                        MessageBox.Show("Patient deleted successfully.", "Notification!",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("There was a problem, try again later.", "Error!",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                    LoadPatients();
+                }
+                else
+                {
+                    DgvPatients.ClearSelection();
+                    PatientRepository.Instance.IdSelectedPatient = null;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a patient.", "Warning!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void CloseForm()
         {
+            PatientRepository.Instance.IdSelectedPatient = null;
+
             HomeForm.Instance.Show();
             this.Hide();
         }

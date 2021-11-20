@@ -44,14 +44,18 @@ namespace PatientManagementSystem
             this.TxtBxLastName = new System.Windows.Forms.TextBox();
             this.TxtBxPhone = new System.Windows.Forms.MaskedTextBox();
             this.TxtBxAddress = new System.Windows.Forms.TextBox();
-            this.TxtBxBirthDate = new System.Windows.Forms.MaskedTextBox();
-            this.TxtBxSmoker = new System.Windows.Forms.TextBox();
             this.TxtBxAllergies = new System.Windows.Forms.TextBox();
-            this.PbPatientPhoto = new System.Windows.Forms.PictureBox();
+            this.PbPatient = new System.Windows.Forms.PictureBox();
             this.BtnSelectPhoto = new System.Windows.Forms.Button();
             this.TxtBxIdentification = new System.Windows.Forms.MaskedTextBox();
+            this.PhotoDialog = new System.Windows.Forms.OpenFileDialog();
+            this.DtpBirthDate = new System.Windows.Forms.DateTimePicker();
+            this.ChkBxYes = new System.Windows.Forms.CheckBox();
+            this.TlpSmoker = new System.Windows.Forms.TableLayoutPanel();
+            this.ChkBxNo = new System.Windows.Forms.CheckBox();
             this.TlpMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbPatientPhoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbPatient)).BeginInit();
+            this.TlpSmoker.SuspendLayout();
             this.SuspendLayout();
             // 
             // TlpMain
@@ -77,12 +81,12 @@ namespace PatientManagementSystem
             this.TlpMain.Controls.Add(this.TxtBxLastName, 4, 2);
             this.TlpMain.Controls.Add(this.TxtBxPhone, 4, 3);
             this.TlpMain.Controls.Add(this.TxtBxAddress, 4, 4);
-            this.TlpMain.Controls.Add(this.TxtBxBirthDate, 4, 6);
-            this.TlpMain.Controls.Add(this.TxtBxSmoker, 4, 7);
             this.TlpMain.Controls.Add(this.TxtBxAllergies, 4, 8);
-            this.TlpMain.Controls.Add(this.PbPatientPhoto, 1, 3);
+            this.TlpMain.Controls.Add(this.PbPatient, 1, 3);
             this.TlpMain.Controls.Add(this.BtnSelectPhoto, 1, 6);
             this.TlpMain.Controls.Add(this.TxtBxIdentification, 4, 5);
+            this.TlpMain.Controls.Add(this.DtpBirthDate, 4, 6);
+            this.TlpMain.Controls.Add(this.TlpSmoker, 4, 7);
             this.TlpMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TlpMain.Location = new System.Drawing.Point(0, 0);
             this.TlpMain.Name = "TlpMain";
@@ -259,28 +263,6 @@ namespace PatientManagementSystem
             this.TxtBxAddress.Size = new System.Drawing.Size(165, 29);
             this.TxtBxAddress.TabIndex = 15;
             // 
-            // TxtBxBirthDate
-            // 
-            this.TxtBxBirthDate.BackColor = System.Drawing.SystemColors.Info;
-            this.TxtBxBirthDate.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TxtBxBirthDate.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.TxtBxBirthDate.Location = new System.Drawing.Point(444, 239);
-            this.TxtBxBirthDate.Mask = "00/00/0000";
-            this.TxtBxBirthDate.Name = "TxtBxBirthDate";
-            this.TxtBxBirthDate.Size = new System.Drawing.Size(165, 29);
-            this.TxtBxBirthDate.TabIndex = 17;
-            this.TxtBxBirthDate.ValidatingType = typeof(System.DateTime);
-            // 
-            // TxtBxSmoker
-            // 
-            this.TxtBxSmoker.BackColor = System.Drawing.SystemColors.Info;
-            this.TxtBxSmoker.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TxtBxSmoker.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.TxtBxSmoker.Location = new System.Drawing.Point(444, 280);
-            this.TxtBxSmoker.Name = "TxtBxSmoker";
-            this.TxtBxSmoker.Size = new System.Drawing.Size(165, 29);
-            this.TxtBxSmoker.TabIndex = 18;
-            // 
             // TxtBxAllergies
             // 
             this.TxtBxAllergies.BackColor = System.Drawing.SystemColors.Info;
@@ -291,16 +273,17 @@ namespace PatientManagementSystem
             this.TxtBxAllergies.Size = new System.Drawing.Size(165, 29);
             this.TxtBxAllergies.TabIndex = 19;
             // 
-            // PbPatientPhoto
+            // PbPatient
             // 
-            this.PbPatientPhoto.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.PbPatientPhoto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PbPatientPhoto.Location = new System.Drawing.Point(70, 117);
-            this.PbPatientPhoto.Name = "PbPatientPhoto";
-            this.TlpMain.SetRowSpan(this.PbPatientPhoto, 3);
-            this.PbPatientPhoto.Size = new System.Drawing.Size(148, 116);
-            this.PbPatientPhoto.TabIndex = 0;
-            this.PbPatientPhoto.TabStop = false;
+            this.PbPatient.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.PbPatient.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PbPatient.Location = new System.Drawing.Point(70, 117);
+            this.PbPatient.Name = "PbPatient";
+            this.TlpMain.SetRowSpan(this.PbPatient, 3);
+            this.PbPatient.Size = new System.Drawing.Size(148, 116);
+            this.PbPatient.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PbPatient.TabIndex = 0;
+            this.PbPatient.TabStop = false;
             // 
             // BtnSelectPhoto
             // 
@@ -328,6 +311,59 @@ namespace PatientManagementSystem
             this.TxtBxIdentification.Size = new System.Drawing.Size(165, 29);
             this.TxtBxIdentification.TabIndex = 20;
             // 
+            // DtpBirthDate
+            // 
+            this.DtpBirthDate.CalendarFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.DtpBirthDate.CustomFormat = "";
+            this.DtpBirthDate.Dock = System.Windows.Forms.DockStyle.Top;
+            this.DtpBirthDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DtpBirthDate.Location = new System.Drawing.Point(444, 239);
+            this.DtpBirthDate.Name = "DtpBirthDate";
+            this.DtpBirthDate.Size = new System.Drawing.Size(165, 29);
+            this.DtpBirthDate.TabIndex = 21;
+            this.DtpBirthDate.Value = new System.DateTime(2021, 11, 20, 0, 0, 0, 0);
+            // 
+            // ChkBxYes
+            // 
+            this.ChkBxYes.AutoSize = true;
+            this.ChkBxYes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ChkBxYes.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ChkBxYes.Location = new System.Drawing.Point(3, 3);
+            this.ChkBxYes.Name = "ChkBxYes";
+            this.ChkBxYes.Size = new System.Drawing.Size(76, 27);
+            this.ChkBxYes.TabIndex = 22;
+            this.ChkBxYes.Text = "Yes";
+            this.ChkBxYes.UseVisualStyleBackColor = true;
+            // 
+            // TlpSmoker
+            // 
+            this.TlpSmoker.ColumnCount = 2;
+            this.TlpSmoker.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TlpSmoker.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TlpSmoker.Controls.Add(this.ChkBxNo, 1, 0);
+            this.TlpSmoker.Controls.Add(this.ChkBxYes, 0, 0);
+            this.TlpSmoker.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TlpSmoker.Location = new System.Drawing.Point(444, 280);
+            this.TlpSmoker.Name = "TlpSmoker";
+            this.TlpSmoker.RowCount = 1;
+            this.TlpSmoker.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.TlpSmoker.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.TlpSmoker.Size = new System.Drawing.Size(165, 33);
+            this.TlpSmoker.TabIndex = 23;
+            // 
+            // ChkBxNo
+            // 
+            this.ChkBxNo.AutoSize = true;
+            this.ChkBxNo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ChkBxNo.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ChkBxNo.Location = new System.Drawing.Point(85, 3);
+            this.ChkBxNo.Name = "ChkBxNo";
+            this.ChkBxNo.Size = new System.Drawing.Size(77, 27);
+            this.ChkBxNo.TabIndex = 23;
+            this.ChkBxNo.Text = "No";
+            this.ChkBxNo.UseVisualStyleBackColor = true;
+            // 
             // AddPatientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -342,7 +378,9 @@ namespace PatientManagementSystem
             this.Load += new System.EventHandler(this.AddPatientForm_Load);
             this.TlpMain.ResumeLayout(false);
             this.TlpMain.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbPatientPhoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbPatient)).EndInit();
+            this.TlpSmoker.ResumeLayout(false);
+            this.TlpSmoker.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -350,7 +388,7 @@ namespace PatientManagementSystem
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel TlpMain;
-        private System.Windows.Forms.PictureBox PbPatientPhoto;
+        private System.Windows.Forms.PictureBox PbPatient;
         private System.Windows.Forms.Button BtnSelectPhoto;
         private System.Windows.Forms.Button BtnSave;
         private System.Windows.Forms.Button BtnCancel;
@@ -366,9 +404,12 @@ namespace PatientManagementSystem
         private System.Windows.Forms.TextBox TxtBxLastName;
         private System.Windows.Forms.MaskedTextBox TxtBxPhone;
         private System.Windows.Forms.TextBox TxtBxAddress;
-        private System.Windows.Forms.MaskedTextBox TxtBxBirthDate;
-        private System.Windows.Forms.TextBox TxtBxSmoker;
         private System.Windows.Forms.TextBox TxtBxAllergies;
         private System.Windows.Forms.MaskedTextBox TxtBxIdentification;
+        private System.Windows.Forms.OpenFileDialog PhotoDialog;
+        private System.Windows.Forms.DateTimePicker DtpBirthDate;
+        private System.Windows.Forms.CheckBox ChkBxYes;
+        private System.Windows.Forms.TableLayoutPanel TlpSmoker;
+        private System.Windows.Forms.CheckBox ChkBxNo;
     }
 }
