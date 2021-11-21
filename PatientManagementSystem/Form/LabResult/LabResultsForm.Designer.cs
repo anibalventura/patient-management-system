@@ -34,11 +34,14 @@ namespace PatientManagementSystem
             this.DgvLabResults = new System.Windows.Forms.DataGridView();
             this.BtnReportResult = new System.Windows.Forms.Button();
             this.BtnBack = new System.Windows.Forms.Button();
-            this.TlpSearch = new System.Windows.Forms.TableLayoutPanel();
+            this.TlpPatientIdentf = new System.Windows.Forms.TableLayoutPanel();
             this.TxtBxPatientIdentification = new System.Windows.Forms.MaskedTextBox();
             this.LblPatientIdentification = new System.Windows.Forms.Label();
+            this.TlpSearch = new System.Windows.Forms.TableLayoutPanel();
+            this.BtnClear = new System.Windows.Forms.Button();
             this.TlpMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvLabResults)).BeginInit();
+            this.TlpPatientIdentf.SuspendLayout();
             this.TlpSearch.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,11 +52,11 @@ namespace PatientManagementSystem
             this.TlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.TlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.TlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.TlpMain.Controls.Add(this.BtnSearch, 2, 0);
             this.TlpMain.Controls.Add(this.DgvLabResults, 1, 1);
             this.TlpMain.Controls.Add(this.BtnReportResult, 1, 3);
             this.TlpMain.Controls.Add(this.BtnBack, 1, 4);
-            this.TlpMain.Controls.Add(this.TlpSearch, 1, 0);
+            this.TlpMain.Controls.Add(this.TlpPatientIdentf, 1, 0);
+            this.TlpMain.Controls.Add(this.TlpSearch, 2, 0);
             this.TlpMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TlpMain.Location = new System.Drawing.Point(0, 0);
             this.TlpMain.Name = "TlpMain";
@@ -68,14 +71,14 @@ namespace PatientManagementSystem
             // 
             // BtnSearch
             // 
-            this.BtnSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.BtnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnSearch.BackColor = System.Drawing.Color.LightGreen;
             this.BtnSearch.FlatAppearance.BorderSize = 0;
             this.BtnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnSearch.Location = new System.Drawing.Point(340, 29);
+            this.BtnSearch.Location = new System.Drawing.Point(3, 26);
             this.BtnSearch.Name = "BtnSearch";
-            this.BtnSearch.Size = new System.Drawing.Size(104, 31);
+            this.BtnSearch.Size = new System.Drawing.Size(126, 31);
             this.BtnSearch.TabIndex = 1;
             this.BtnSearch.Text = "Search";
             this.BtnSearch.UseVisualStyleBackColor = false;
@@ -98,6 +101,7 @@ namespace PatientManagementSystem
             this.DgvLabResults.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvLabResults.Size = new System.Drawing.Size(534, 174);
             this.DgvLabResults.TabIndex = 3;
+            this.DgvLabResults.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvLabResults_CellClick);
             // 
             // BtnReportResult
             // 
@@ -131,21 +135,21 @@ namespace PatientManagementSystem
             this.BtnBack.UseVisualStyleBackColor = false;
             this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
-            // TlpSearch
+            // TlpPatientIdentf
             // 
-            this.TlpSearch.ColumnCount = 2;
-            this.TlpSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.21212F));
-            this.TlpSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.78788F));
-            this.TlpSearch.Controls.Add(this.TxtBxPatientIdentification, 1, 0);
-            this.TlpSearch.Controls.Add(this.LblPatientIdentification, 0, 0);
-            this.TlpSearch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TlpSearch.Location = new System.Drawing.Point(70, 3);
-            this.TlpSearch.Name = "TlpSearch";
-            this.TlpSearch.RowCount = 1;
-            this.TlpSearch.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TlpSearch.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 84F));
-            this.TlpSearch.Size = new System.Drawing.Size(264, 84);
-            this.TlpSearch.TabIndex = 6;
+            this.TlpPatientIdentf.ColumnCount = 2;
+            this.TlpPatientIdentf.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.21212F));
+            this.TlpPatientIdentf.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.78788F));
+            this.TlpPatientIdentf.Controls.Add(this.TxtBxPatientIdentification, 1, 0);
+            this.TlpPatientIdentf.Controls.Add(this.LblPatientIdentification, 0, 0);
+            this.TlpPatientIdentf.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TlpPatientIdentf.Location = new System.Drawing.Point(70, 3);
+            this.TlpPatientIdentf.Name = "TlpPatientIdentf";
+            this.TlpPatientIdentf.RowCount = 1;
+            this.TlpPatientIdentf.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.TlpPatientIdentf.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 84F));
+            this.TlpPatientIdentf.Size = new System.Drawing.Size(264, 84);
+            this.TlpPatientIdentf.TabIndex = 6;
             // 
             // TxtBxPatientIdentification
             // 
@@ -169,6 +173,37 @@ namespace PatientManagementSystem
             this.LblPatientIdentification.TabIndex = 3;
             this.LblPatientIdentification.Text = "Patient Identf.";
             // 
+            // TlpSearch
+            // 
+            this.TlpSearch.ColumnCount = 2;
+            this.TlpSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TlpSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TlpSearch.Controls.Add(this.BtnSearch, 0, 0);
+            this.TlpSearch.Controls.Add(this.BtnClear, 1, 0);
+            this.TlpSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TlpSearch.Location = new System.Drawing.Point(340, 3);
+            this.TlpSearch.Name = "TlpSearch";
+            this.TlpSearch.RowCount = 1;
+            this.TlpSearch.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.TlpSearch.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.TlpSearch.Size = new System.Drawing.Size(264, 84);
+            this.TlpSearch.TabIndex = 7;
+            // 
+            // BtnClear
+            // 
+            this.BtnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnClear.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BtnClear.FlatAppearance.BorderSize = 0;
+            this.BtnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnClear.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BtnClear.Location = new System.Drawing.Point(135, 27);
+            this.BtnClear.Name = "BtnClear";
+            this.BtnClear.Size = new System.Drawing.Size(126, 29);
+            this.BtnClear.TabIndex = 2;
+            this.BtnClear.Text = "Clear";
+            this.BtnClear.UseVisualStyleBackColor = false;
+            this.BtnClear.Click += new System.EventHandler(this.BtnClear_Click);
+            // 
             // LabResultsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -184,8 +219,9 @@ namespace PatientManagementSystem
             this.VisibleChanged += new System.EventHandler(this.LabResultsForm_VisibleChanged);
             this.TlpMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DgvLabResults)).EndInit();
+            this.TlpPatientIdentf.ResumeLayout(false);
+            this.TlpPatientIdentf.PerformLayout();
             this.TlpSearch.ResumeLayout(false);
-            this.TlpSearch.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -198,7 +234,9 @@ namespace PatientManagementSystem
         private System.Windows.Forms.DataGridView DgvLabResults;
         private System.Windows.Forms.Button BtnReportResult;
         private System.Windows.Forms.Button BtnBack;
-        private System.Windows.Forms.TableLayoutPanel TlpSearch;
+        private System.Windows.Forms.TableLayoutPanel TlpPatientIdentf;
         private System.Windows.Forms.Label LblPatientIdentification;
+        private System.Windows.Forms.TableLayoutPanel TlpSearch;
+        private System.Windows.Forms.Button BtnClear;
     }
 }
