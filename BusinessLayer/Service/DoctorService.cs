@@ -45,6 +45,11 @@ namespace BusinessLayer.Service
             return _doctorRepository.GetLastId();
         }
 
+        public DataTable GetByIdentf(string doctorIdentification)
+        {
+            return _doctorRepository.GetByIdentf(doctorIdentification);
+        }
+
         public DataTable GetAll()
         {
             return _doctorRepository.GetAll();

@@ -148,16 +148,22 @@ namespace PatientManagementSystem
             // 
             // DgvAppointments
             // 
+            this.DgvAppointments.AllowUserToAddRows = false;
+            this.DgvAppointments.AllowUserToDeleteRows = false;
             this.DgvAppointments.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DgvAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TlpMain.SetColumnSpan(this.DgvAppointments, 4);
             this.DgvAppointments.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DgvAppointments.Location = new System.Drawing.Point(104, 93);
+            this.DgvAppointments.MultiSelect = false;
             this.DgvAppointments.Name = "DgvAppointments";
+            this.DgvAppointments.ReadOnly = true;
             this.TlpMain.SetRowSpan(this.DgvAppointments, 2);
             this.DgvAppointments.RowTemplate.Height = 25;
+            this.DgvAppointments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvAppointments.Size = new System.Drawing.Size(466, 174);
             this.DgvAppointments.TabIndex = 5;
+            this.DgvAppointments.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvAppointments_CellClick);
             // 
             // BtnDelete
             // 

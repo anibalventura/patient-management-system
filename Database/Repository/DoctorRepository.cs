@@ -118,6 +118,18 @@ namespace Database.Repository
             return lastId;
         }
 
+        public DataTable GetByIdentf(string doctorIdentification)
+        {
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            string sqlQuery = "select Id as 'Code',Name as 'Name',LastName as 'Last name',Email,Phone,Identification from Doctors where Identification = @patientidentification";
+            SqlCommand command = new SqlCommand(sqlQuery, GetConnection());
+
+            command.Parameters.AddWithValue("@patientidentification", doctorIdentification);
+            adapter.SelectCommand = command;
+
+            return LoadData(adapter);
+        }
+
         public DataTable GetAll()
         {
             string sqlQuery = "select Id as 'Code',Name as 'Name',LastName as 'Last name',Email,Phone,Identification from Doctors";

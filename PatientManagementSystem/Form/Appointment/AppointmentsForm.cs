@@ -1,4 +1,8 @@
-﻿using System;
+﻿using BusinessLayer.Repository;
+using BusinessLayer.Service;
+using System;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace PatientManagementSystem
@@ -7,9 +11,16 @@ namespace PatientManagementSystem
     {
         public static AppointmentsForm Instance { get; } = new AppointmentsForm();
 
+        private AppointmentService _appointmentService;
+
         public AppointmentsForm()
         {
             InitializeComponent();
+
+            // Init SQL connection.
+            string connectionString = ConfigurationManager.ConnectionStrings["Default"].ConnectionString;
+            SqlConnection connection = new SqlConnection(connectionString);
+            _appointmentService = new AppointmentService(connection);
         }
 
         // Disable window close button.
@@ -27,11 +38,15 @@ namespace PatientManagementSystem
 
         private void AppointmentsForm_Load(object sender, EventArgs e)
         {
+            HideButtons();
             LoadAppointments();
+
+            AppointmentRepository.Instance.IdSelectedAppointment = null;
         }
 
         private void AppointmentsForm_VisibleChanged(object sender, EventArgs e)
         {
+            HideButtons();
             LoadAppointments();
         }
 
@@ -43,6 +58,15 @@ namespace PatientManagementSystem
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             AddAppointment();
+        }
+
+        private void DgvAppointments_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                AppointmentRepository.Instance.IdSelectedAppointment = Convert.ToInt32(DgvAppointments.Rows[e.RowIndex].Cells[0].Value.ToString());
+                DgvAppointments.Show();
+            }
         }
 
         private void BtnConsult_Click(object sender, EventArgs e)
@@ -74,9 +98,17 @@ namespace PatientManagementSystem
 
         #region Methods
 
+        private void HideButtons()
+        {
+            BtnConsult.Hide();
+            BtnConsultResults.Hide();
+            BtnSeeResults.Hide();
+        }
+
         private void LoadAppointments()
         {
-
+            DgvAppointments.DataSource = _appointmentService.GetAll();
+            DgvAppointments.ClearSelection();
         }
 
         private void AddAppointment()
@@ -109,11 +141,42 @@ namespace PatientManagementSystem
 
         private void DeleteAppointment()
         {
+            if (AppointmentRepository.Instance.IdSelectedAppointment != null)
+            {
+                DialogResult response = MessageBox.Show("Are you sure you want to delete this appointment?", "Warning!",
+                    MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
 
+                if (response == DialogResult.OK)
+                {
+                    bool result = _appointmentService.Delete((int)AppointmentRepository.Instance.IdSelectedAppointment);
+
+                    if (result)
+                    {
+                        MessageBox.Show("Appointment deleted successfully.", "Notification!",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("There was a problem, try again later.", "Error!",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                    LoadAppointments();
+
+                    AppointmentRepository.Instance.IdSelectedAppointment = null;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a appointment.", "Warning!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void CloseForm()
         {
+            AppointmentRepository.Instance.IdSelectedAppointment = null;
+
             HomeForm.Instance.Show();
             this.Hide();
         }
