@@ -138,6 +138,7 @@ namespace PatientManagementSystem
                     }
 
                     LoadDoctors();
+                    DoctorRepository.Instance.IdSelectedDoctor = null;
                 }
                 else
                 {

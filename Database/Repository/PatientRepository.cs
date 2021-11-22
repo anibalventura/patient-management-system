@@ -11,7 +11,7 @@ namespace Database.Repository
 
         public bool Add(Patient patient)
         {
-            string sqlQuery = "insert into Patients(Name,LastName,Phone,Address,Identification,BirthDate,Smoker,Allergies) values(@name,@lastname,@phone,@address,@identification,@birthdate,@smoker,@allergies)";
+            string sqlQuery = "insert into Patients(Name, LastName, Phone, Address, Identification, BirthDate, Smoker, Allergies) values(@name, @lastname, @phone, @address, @identification, @birthdate, @smoker, @allergies)";
             SqlCommand command = new SqlCommand(sqlQuery, GetConnection());
 
             command.Parameters.AddWithValue("@name", patient.Name);
@@ -28,7 +28,7 @@ namespace Database.Repository
 
         public bool Edit(Patient patient)
         {
-            string sqlQuery = "update Patients set Name=@name,LastName=@lastname,Phone=@phone,Address=@address,Identification=@identification,BirthDate=@birthdate,Smoker=@smoker,Allergies=@allergies where Id = @id";
+            string sqlQuery = "update Patients set Name = @name, LastName = @lastname, Phone = @phone, Address = @address, Identification = @identification, BirthDate = @birthdate, Smoker = @smoker, Allergies = @allergies where Id = @id";
             SqlCommand command = new SqlCommand(sqlQuery, GetConnection());
 
             command.Parameters.AddWithValue("@name", patient.Name);
@@ -47,7 +47,7 @@ namespace Database.Repository
         public bool SavePhoto(int id, string destination)
         {
 
-            SqlCommand command = new SqlCommand("update Patients set Photo=@photo where Id = @id", GetConnection());
+            SqlCommand command = new SqlCommand("update Patients set Photo = @photo where Id = @id", GetConnection());
 
             command.Parameters.AddWithValue("@id", id);
             command.Parameters.AddWithValue("@photo", destination);
@@ -69,7 +69,7 @@ namespace Database.Repository
         {
             GetConnection().Open();
 
-            string sqlQuery = "select Id,Name,LastName,Phone,Address,Identification,BirthDate,Smoker,Allergies,Photo from Patients where Id = @id";
+            string sqlQuery = "select Id, Name, LastName, Phone, Address, Identification, BirthDate, Smoker, Allergies, Photo from Patients where Id = @id";
             SqlCommand command = new SqlCommand(sqlQuery, GetConnection());
 
             command.Parameters.AddWithValue("@id", patientId);
@@ -123,7 +123,7 @@ namespace Database.Repository
         public DataTable GetByIdentf(string patientIdentification)
         {
             SqlDataAdapter adapter = new SqlDataAdapter();
-            string sqlQuery = "select Id as 'Code',Name,LastName as 'Last name',Phone,Address,Identification,BirthDate as 'Birth date',Smoker,Allergies from Patients where Identification = @patientidentification";
+            string sqlQuery = "select Id as 'Code', Name, LastName as 'Last name', Phone, Address, Identification, BirthDate as 'Birth date', Smoker, Allergies from Patients where Identification = @patientidentification";
             SqlCommand command = new SqlCommand(sqlQuery, GetConnection());
 
             command.Parameters.AddWithValue("@patientidentification", patientIdentification);
@@ -134,7 +134,7 @@ namespace Database.Repository
 
         public DataTable GetAll()
         {
-            string sqlQuery = "select Id as 'Code',Name,LastName as 'Last name',Phone,Address,Identification,BirthDate as 'Birth date',Smoker,Allergies from Patients";
+            string sqlQuery = "select Id as 'Code', Name, LastName as 'Last name', Phone, Address, Identification, BirthDate as 'Birth date', Smoker, Allergies from Patients";
             SqlDataAdapter adapter = new SqlDataAdapter(sqlQuery, GetConnection());
             return LoadData(adapter);
         }

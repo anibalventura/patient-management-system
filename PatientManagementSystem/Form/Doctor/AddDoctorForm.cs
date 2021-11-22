@@ -206,6 +206,10 @@ namespace PatientManagementSystem
                     {
                         CloseForm();
                     }
+                    else
+                    {
+                        CloseForm();
+                    }
                 }
                 else
                 {
@@ -218,6 +222,7 @@ namespace PatientManagementSystem
         private void CloseForm()
         {
             DoctorRepository.Instance.IdSelectedDoctor = null;
+
             this.Close();
         }
 

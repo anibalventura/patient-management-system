@@ -28,7 +28,7 @@ namespace Database
 
                 return true;
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
                 return false;
             }
@@ -45,7 +45,7 @@ namespace Database
 
                 return data;
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
                 return null;
             }

@@ -93,6 +93,10 @@ namespace PatientManagementSystem
                     {
                         CloseForm();
                     }
+                    else
+                    {
+                        CloseForm();
+                    }
                 }
                 else
                 {
@@ -140,6 +144,10 @@ namespace PatientManagementSystem
                     {
                         CloseForm();
                     }
+                    else
+                    {
+                        CloseForm();
+                    }
                 }
                 else
                 {
@@ -152,6 +160,7 @@ namespace PatientManagementSystem
         private void CloseForm()
         {
             LabTestRepository.Instance.IdSelectedLabTest = null;
+
             this.Close();
         }
 

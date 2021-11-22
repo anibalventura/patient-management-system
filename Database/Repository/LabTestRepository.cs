@@ -21,7 +21,7 @@ namespace Database.Repository
 
         public bool Edit(LabTest labTest)
         {
-            string sqlQuery = "update LabTests set Name=@name where Id = @id";
+            string sqlQuery = "update LabTests set Name = @name where Id = @id";
             SqlCommand command = new SqlCommand(sqlQuery, GetConnection());
 
             command.Parameters.AddWithValue("@name", labTest.Name);
@@ -46,7 +46,7 @@ namespace Database.Repository
             {
                 GetConnection().Open();
 
-                string sqlQuery = "select Id,Name from LabTests where Id = @id";
+                string sqlQuery = "select Id, Name from LabTests where Id = @id";
                 SqlCommand command = new SqlCommand(sqlQuery, GetConnection());
 
                 command.Parameters.AddWithValue("@id", labTestId);
@@ -66,7 +66,7 @@ namespace Database.Repository
 
                 return data;
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
                 return null;
             }
@@ -74,7 +74,7 @@ namespace Database.Repository
 
         public DataTable GetAll()
         {
-            string sqlQuery = "select Id as 'Code',Name from LabTests";
+            string sqlQuery = "select Id as 'Code', Name from LabTests";
             SqlDataAdapter adapter = new SqlDataAdapter(sqlQuery, GetConnection());
             return LoadData(adapter);
         }

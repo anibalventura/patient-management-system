@@ -11,7 +11,7 @@ namespace Database.Repository
 
         public bool Add(Appointment appointment)
         {
-            string sqlQuery = "insert into Appointments(IdPatient,IdDoctor,DateAndTime,Cause,IdAppointmentStatus) values(@idpatient,@iddoctor,@dateandtime,@cause,@idappointmentstatus)";
+            string sqlQuery = "insert into Appointments(IdPatient, IdDoctor, DateAndTime, Cause, IdAppointmentStatus) values(@idpatient, @iddoctor, @dateandtime, @cause, @idappointmentstatus)";
             SqlCommand command = new SqlCommand(sqlQuery, GetConnection());
 
             command.Parameters.AddWithValue("@idpatient", appointment.IdPatient);
@@ -45,7 +45,7 @@ namespace Database.Repository
 
         public DataTable GetAll()
         {
-            string sqlQuery = "select ap.Id as 'Code',(p.Name + ' ' + p.LastName) as 'Patient', (d.Name + ' ' + d.LastName) as 'Doctor', cast(ap.DateAndTime as Date) as 'Date', cast(ap.DateAndTime as Time(0)) as 'Time', ap.Cause, apst.Name as 'Status' from Appointments ap inner join Patients p on ap.IdPatient = p.Id inner join Doctors d on ap.IdDoctor = d.Id inner join AppointmentStatus apst on ap.IdAppointmentStatus = apst.Id";
+            string sqlQuery = "select ap.Id as 'Code', (p.Name + ' ' + p.LastName) as 'Patient', (d.Name + ' ' + d.LastName) as 'Doctor', cast(ap.DateAndTime as Date) as 'Date', cast(ap.DateAndTime as Time(0)) as 'Time', ap.Cause, apst.Name as 'Status' from Appointments ap inner join Patients p on ap.IdPatient = p.Id inner join Doctors d on ap.IdDoctor = d.Id inner join AppointmentStatus apst on ap.IdAppointmentStatus = apst.Id";
             SqlDataAdapter adapter = new SqlDataAdapter(sqlQuery, GetConnection());
             return LoadData(adapter);
         }

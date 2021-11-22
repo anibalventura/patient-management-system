@@ -11,7 +11,7 @@ namespace Database.Repository
 
         public bool Add(User user)
         {
-            string sqlQuery = "insert into Users(Name,LastName,Email,Username,Password,IdUserType) values(@name,@lastname,@email,@username,@password,@idusertype)";
+            string sqlQuery = "insert into Users(Name, LastName, Email, Username, Password, IdUserType) values(@name, @lastname, @email, @username, @password, @idusertype)";
             SqlCommand command = new SqlCommand(sqlQuery, GetConnection());
 
             command.Parameters.AddWithValue("@name", user.Name);
@@ -26,7 +26,7 @@ namespace Database.Repository
 
         public bool Edit(User user)
         {
-            string sqlQuery = "update Users set Name=@name,LastName=@lastname,Email=@email,Username=@username,Password=@password,IdUserType=@idusertype where Id = @id";
+            string sqlQuery = "update Users set Name = @name, LastName = @lastname, Email = @email, Username = @username, Password = @password, IdUserType = @idusertype where Id = @id";
             SqlCommand command = new SqlCommand(sqlQuery, GetConnection());
 
             command.Parameters.AddWithValue("@name", user.Name);
@@ -56,7 +56,7 @@ namespace Database.Repository
             {
                 GetConnection().Open();
 
-                string sqlQuery = "select u.Id,u.Name,u.LastName,u.Email,u.Username,u.Password,ut.Name from Users u inner join UserType ut on u.IdUserType = ut.Id where u.Id = @id";
+                string sqlQuery = "select u.Id, u.Name, u.LastName, u.Email, u.Username, u.Password, ut.Name from Users u inner join UserType ut on u.IdUserType = ut.Id where u.Id = @id";
                 SqlCommand command = new SqlCommand(sqlQuery, GetConnection());
 
                 command.Parameters.AddWithValue("@id", userId);
@@ -89,7 +89,7 @@ namespace Database.Repository
 
         public DataTable GetAll()
         {
-            string sqlQuery = "select u.Id as 'Code',u.Name as 'Name',u.LastName as 'Last name',u.Email,u.Username, ut.Name as 'User type' from Users u inner join UserType ut on u.IdUserType = ut.Id";
+            string sqlQuery = "select u.Id as 'Code', u.Name, u.LastName as 'Last name', u.Email, u.Username, ut.Name as 'User type' from Users u inner join UserType ut on u.IdUserType = ut.Id";
             SqlDataAdapter adapter = new SqlDataAdapter(sqlQuery, GetConnection());
             return LoadData(adapter);
         }
@@ -100,7 +100,7 @@ namespace Database.Repository
             {
                 GetConnection().Open();
 
-                string sqlQuery = "select u.Username from Users u where u.Username = @username";
+                string sqlQuery = "select Username from Users where Username = @username";
                 SqlCommand command = new SqlCommand(sqlQuery, GetConnection());
 
                 command.Parameters.AddWithValue("@username", username);
@@ -126,7 +126,7 @@ namespace Database.Repository
                     return false;
                 }
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
                 return false;
             }
@@ -138,7 +138,7 @@ namespace Database.Repository
             {
                 GetConnection().Open();
 
-                string sqlQuery = "select u.Id,u.Name,u.LastName,u.Email,u.Username,u.Password,u.IdUserType from Users u where u.Username = @username and u.Password = @password";
+                string sqlQuery = "select Id, Name, LastName, Email, Username, Password, IdUserType from Users where Username = @username and Password = @password";
                 SqlCommand command = new SqlCommand(sqlQuery, GetConnection());
 
                 command.Parameters.AddWithValue("@username", username);
@@ -164,7 +164,7 @@ namespace Database.Repository
 
                 return data;
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
                 return null;
             }

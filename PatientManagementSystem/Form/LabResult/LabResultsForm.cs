@@ -72,6 +72,7 @@ namespace PatientManagementSystem
             if (e.RowIndex >= 0)
             {
                 LabResultRepository.Instance.IdSelectedLabResult = Convert.ToInt32(DgvLabResults.Rows[e.RowIndex].Cells[0].Value.ToString());
+
                 BtnReportResult.Show();
             }
         }
@@ -123,6 +124,8 @@ namespace PatientManagementSystem
 
         private void CloseForm()
         {
+            LabResultRepository.Instance.IdSelectedLabResult = null;
+
             HomeForm.Instance.Show();
             this.Hide();
         }

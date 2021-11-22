@@ -11,7 +11,7 @@ namespace Database.Repository
 
         public bool Add(Doctor doctor)
         {
-            string sqlQuery = "insert into Doctors(Name,LastName,Email,Phone,Identification) values(@name,@lastname,@email,@phone,@identification)";
+            string sqlQuery = "insert into Doctors(Name, LastName, Email, Phone, Identification) values(@name, @lastname, @email, @phone, @identification)";
             SqlCommand command = new SqlCommand(sqlQuery, GetConnection());
 
             command.Parameters.AddWithValue("@name", doctor.Name);
@@ -25,7 +25,7 @@ namespace Database.Repository
 
         public bool Edit(Doctor doctor)
         {
-            string sqlQuery = "update Doctors set Name=@name,LastName=@lastname,Email=@email,Phone=@phone,Identification=@identification where Id = @id";
+            string sqlQuery = "update Doctors set Name = @name, LastName = @lastname, Email = @email, Phone = @phone, Identification = @identification where Id = @id";
             SqlCommand command = new SqlCommand(sqlQuery, GetConnection());
 
             command.Parameters.AddWithValue("@name", doctor.Name);
@@ -41,7 +41,7 @@ namespace Database.Repository
         public bool SavePhoto(int id, string destination)
         {
 
-            SqlCommand command = new SqlCommand("update Doctors set Photo=@photo where Id = @id", GetConnection());
+            SqlCommand command = new SqlCommand("update Doctors set Photo = @photo where Id = @id", GetConnection());
 
             command.Parameters.AddWithValue("@id", id);
             command.Parameters.AddWithValue("@photo", destination);
@@ -65,7 +65,7 @@ namespace Database.Repository
             {
                 GetConnection().Open();
 
-                string sqlQuery = "select Id,Name,LastName,Email,Phone,Identification,Photo from Doctors where Id = @id";
+                string sqlQuery = "select Id, Name, LastName, Email, Phone, Identification, Photo from Doctors where Id = @id";
                 SqlCommand command = new SqlCommand(sqlQuery, GetConnection());
 
                 command.Parameters.AddWithValue("@id", doctorId);
@@ -90,7 +90,7 @@ namespace Database.Repository
 
                 return data;
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
                 return null;
             }
@@ -121,7 +121,7 @@ namespace Database.Repository
         public DataTable GetByIdentf(string doctorIdentification)
         {
             SqlDataAdapter adapter = new SqlDataAdapter();
-            string sqlQuery = "select Id as 'Code',Name as 'Name',LastName as 'Last name',Email,Phone,Identification from Doctors where Identification = @patientidentification";
+            string sqlQuery = "select Id as 'Code', Name, LastName as 'Last name', Email, Phone, Identification from Doctors where Identification = @patientidentification";
             SqlCommand command = new SqlCommand(sqlQuery, GetConnection());
 
             command.Parameters.AddWithValue("@patientidentification", doctorIdentification);
@@ -132,7 +132,7 @@ namespace Database.Repository
 
         public DataTable GetAll()
         {
-            string sqlQuery = "select Id as 'Code',Name as 'Name',LastName as 'Last name',Email,Phone,Identification from Doctors";
+            string sqlQuery = "select Id as 'Code', Name, LastName as 'Last name', Email, Phone, Identification from Doctors";
             SqlDataAdapter adapter = new SqlDataAdapter(sqlQuery, GetConnection());
             return LoadData(adapter);
         }

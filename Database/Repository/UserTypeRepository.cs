@@ -15,7 +15,7 @@ namespace Database.Repository
             {
                 GetConnection().Open();
 
-                string sqlQuery = "select Id,Name from UserType";
+                string sqlQuery = "select Id, Name from UserType";
                 SqlCommand command = new SqlCommand(sqlQuery, GetConnection());
 
                 SqlDataReader reader = command.ExecuteReader();

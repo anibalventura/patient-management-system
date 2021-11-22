@@ -138,6 +138,7 @@ namespace PatientManagementSystem
                     }
 
                     LoadLabTests();
+                    LabTestRepository.Instance.IdSelectedLabTest = null;
                 }
                 else
                 {

@@ -11,7 +11,7 @@ namespace Database.Repository
 
         public bool Add(LabResult labResult)
         {
-            string sqlQuery = "insert into LabResults(IdPatient,IdAppointment,IdLabTest,IdDoctor,IdResultStatus) values(@idpatient,@idappointment,@idlabtest,@iddoctor,@idresultstatus)";
+            string sqlQuery = "insert into LabResults(IdPatient, IdAppointment, IdLabTest, IdDoctor, IdResultStatus) values(@idpatient, @idappointment, @idlabtest, @iddoctor, @idresultstatus)";
             SqlCommand command = new SqlCommand(sqlQuery, GetConnection());
 
             command.Parameters.AddWithValue("@idpatient", labResult.IdPatient);
@@ -30,7 +30,7 @@ namespace Database.Repository
 
         public bool ReportResult(LabResult labResult)
         {
-            string sqlQuery = "update LabResults set Result=@result,IdResultStatus=@idresultstatus where Id = @id";
+            string sqlQuery = "update LabResults set Result = @result, IdResultStatus = @idresultstatus where Id = @id";
             SqlCommand command = new SqlCommand(sqlQuery, GetConnection());
 
             command.Parameters.AddWithValue("@result", labResult.Result);
@@ -53,7 +53,7 @@ namespace Database.Repository
         public DataTable GetByPatient(string patientIdentification)
         {
             SqlDataAdapter adapter = new SqlDataAdapter();
-            string sqlQuery = "select lr.Id as 'Code',p.Name, p.LastName as 'Last name', p.Identification, lt.Name as 'Lab test' from LabResults lr inner join Patients p on lr.IdPatient = p.Id inner join LabTests lt on lr.IdLabTest = lt.Id where p.Identification = @patientidentification";
+            string sqlQuery = "select lr.Id as 'Code', p.Name, p.LastName as 'Last name', p.Identification, lt.Name as 'Lab test' from LabResults lr inner join Patients p on lr.IdPatient = p.Id inner join LabTests lt on lr.IdLabTest = lt.Id where p.Identification = @patientidentification";
             SqlCommand command = new SqlCommand(sqlQuery, GetConnection());
 
             command.Parameters.AddWithValue("@patientidentification", patientIdentification);
@@ -65,7 +65,7 @@ namespace Database.Repository
         public DataTable GetAll()
         {
             // Get only lab results with 'Pending' status (2).
-            string sqlQuery = "select lr.Id as 'Code',p.Name, p.LastName as 'Last name', p.Identification, lt.Name as 'Lab test' from LabResults lr inner join Patients p on lr.IdPatient = p.Id inner join LabTests lt on lr.IdLabTest = lt.Id where IdResultStatus = 2";
+            string sqlQuery = "select lr.Id as 'Code', p.Name, p.LastName as 'Last name', p.Identification, lt.Name as 'Lab test' from LabResults lr inner join Patients p on lr.IdPatient = p.Id inner join LabTests lt on lr.IdLabTest = lt.Id where IdResultStatus = 2";
             SqlDataAdapter adapter = new SqlDataAdapter(sqlQuery, GetConnection());
             return LoadData(adapter);
         }

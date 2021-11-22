@@ -113,6 +113,10 @@ namespace PatientManagementSystem
                     {
                         CloseForm();
                     }
+                    else
+                    {
+                        CloseForm();
+                    }
                 }
                 else
                 {

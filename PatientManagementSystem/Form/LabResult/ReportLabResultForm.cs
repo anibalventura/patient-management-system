@@ -83,6 +83,10 @@ namespace PatientManagementSystem
                     {
                         CloseForm();
                     }
+                    else
+                    {
+                        CloseForm();
+                    }
                 }
                 else
                 {
@@ -95,6 +99,7 @@ namespace PatientManagementSystem
         private void CloseForm()
         {
             LabResultRepository.Instance.IdSelectedLabResult = null;
+
             this.Close();
         }
 

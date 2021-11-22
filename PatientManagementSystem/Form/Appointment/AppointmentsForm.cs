@@ -65,6 +65,7 @@ namespace PatientManagementSystem
             if (e.RowIndex >= 0)
             {
                 AppointmentRepository.Instance.IdSelectedAppointment = Convert.ToInt32(DgvAppointments.Rows[e.RowIndex].Cells[0].Value.ToString());
+
                 DgvAppointments.Show();
             }
         }
@@ -162,7 +163,11 @@ namespace PatientManagementSystem
                     }
 
                     LoadAppointments();
-
+                    AppointmentRepository.Instance.IdSelectedAppointment = null;
+                }
+                else
+                {
+                    DgvAppointments.ClearSelection();
                     AppointmentRepository.Instance.IdSelectedAppointment = null;
                 }
             }
