@@ -1,5 +1,7 @@
 ﻿using BusinessLayer.Repository;
 using BusinessLayer.Service;
+using BusinessLayer.Enum;
+using Database.Model;
 using System;
 using System.Configuration;
 using System.Data.SqlClient;
@@ -64,9 +66,26 @@ namespace PatientManagementSystem
         {
             if (e.RowIndex >= 0)
             {
-                AppointmentRepository.Instance.IdSelectedAppointment = Convert.ToInt32(DgvAppointments.Rows[e.RowIndex].Cells[0].Value.ToString());
+                int selection = Convert.ToInt32(DgvAppointments.Rows[e.RowIndex].Cells[0].Value.ToString());
 
-                DgvAppointments.Show();
+                AppointmentRepository.Instance.IdSelectedAppointment = selection;
+
+                HideButtons();
+
+                Appointment appointment = _appointmentService.GetById(selection);
+
+                switch (appointment.IdAppointmentStatus)
+                {
+                    case (int)AppointmentStatus.PendingConsult:
+                        BtnConsult.Show();
+                        break;
+                    case (int)AppointmentStatus.PendingResult:
+                        BtnConsultResults.Show();
+                        break;
+                    case (int)AppointmentStatus.Complete:
+                        BtnSeeResults.Show();
+                        break;
+                }
             }
         }
 

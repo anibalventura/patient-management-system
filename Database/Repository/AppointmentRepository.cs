@@ -40,7 +40,38 @@ namespace Database.Repository
 
         public Appointment GetById(int appointmentId)
         {
-            throw new NotImplementedException();
+            try
+            {
+                GetConnection().Open();
+
+                string sqlQuery = "select Id, IdPatient, IdDoctor, DateAndTime, Cause, IdAppointmentStatus from Appointments where Id = @id";
+                SqlCommand command = new SqlCommand(sqlQuery, GetConnection());
+
+                command.Parameters.AddWithValue("@id", appointmentId);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                Appointment data = new Appointment();
+                while (reader.Read())
+                {
+                    data.Id = reader.IsDBNull(0) ? 0 : reader.GetInt32(0);
+                    data.IdPatient = reader.IsDBNull(1) ? 0 : reader.GetInt32(1);
+                    data.IdDoctor = reader.IsDBNull(2) ? 0 : reader.GetInt32(2);
+                    data.DateAndTime = reader.IsDBNull(3) ? DateTime.Now : reader.GetDateTime(3);
+                    data.Cause = reader.IsDBNull(4) ? "" : reader.GetString(4);
+                    data.IdAppointmentStatus = reader.IsDBNull(5) ? 0 : reader.GetInt32(5);
+                }
+
+                reader.Close();
+                reader.Dispose();
+                GetConnection().Close();
+
+                return data;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
         }
 
         public DataTable GetAll()

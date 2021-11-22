@@ -33,7 +33,7 @@ namespace BusinessLayer.Service
 
         public Appointment GetById(int appointmentId)
         {
-            throw new NotImplementedException();
+            return _appointmentRepository.GetById(appointmentId);
         }
 
         public DataTable GetAll()
