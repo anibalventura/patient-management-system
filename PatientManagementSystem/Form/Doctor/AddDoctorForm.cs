@@ -83,10 +83,18 @@ namespace PatientManagementSystem
 
             if (result == DialogResult.OK)
             {
-                string file = PhotoDialog.FileName;
-                _fileName = file;
+                if (PhotoDialog.FileName.EndsWith(".png") || PhotoDialog.FileName.EndsWith(".jpg") || PhotoDialog.FileName.EndsWith(".jpeg"))
+                {
+                    string file = PhotoDialog.FileName;
+                    _fileName = file;
 
-                PbDoctor.ImageLocation = file;
+                    PbDoctor.ImageLocation = file;
+                }
+                else
+                {
+                    MessageBox.Show("Only can select files with image format (*.PNG; *.JPG, *.JPEG).", "Error!",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 

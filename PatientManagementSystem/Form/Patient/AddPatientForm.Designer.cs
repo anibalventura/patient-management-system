@@ -48,11 +48,11 @@ namespace PatientManagementSystem
             this.PbPatient = new System.Windows.Forms.PictureBox();
             this.BtnSelectPhoto = new System.Windows.Forms.Button();
             this.TxtBxIdentification = new System.Windows.Forms.MaskedTextBox();
-            this.PhotoDialog = new System.Windows.Forms.OpenFileDialog();
             this.DtpBirthDate = new System.Windows.Forms.DateTimePicker();
-            this.ChkBxYes = new System.Windows.Forms.CheckBox();
             this.TlpSmoker = new System.Windows.Forms.TableLayoutPanel();
             this.ChkBxNo = new System.Windows.Forms.CheckBox();
+            this.ChkBxYes = new System.Windows.Forms.CheckBox();
+            this.PhotoDialog = new System.Windows.Forms.OpenFileDialog();
             this.TlpMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbPatient)).BeginInit();
             this.TlpSmoker.SuspendLayout();
@@ -324,18 +324,6 @@ namespace PatientManagementSystem
             this.DtpBirthDate.TabIndex = 21;
             this.DtpBirthDate.Value = new System.DateTime(2021, 11, 20, 0, 0, 0, 0);
             // 
-            // ChkBxYes
-            // 
-            this.ChkBxYes.AutoSize = true;
-            this.ChkBxYes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ChkBxYes.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ChkBxYes.Location = new System.Drawing.Point(3, 3);
-            this.ChkBxYes.Name = "ChkBxYes";
-            this.ChkBxYes.Size = new System.Drawing.Size(76, 27);
-            this.ChkBxYes.TabIndex = 22;
-            this.ChkBxYes.Text = "Yes";
-            this.ChkBxYes.UseVisualStyleBackColor = true;
-            // 
             // TlpSmoker
             // 
             this.TlpSmoker.ColumnCount = 2;
@@ -348,7 +336,7 @@ namespace PatientManagementSystem
             this.TlpSmoker.Name = "TlpSmoker";
             this.TlpSmoker.RowCount = 1;
             this.TlpSmoker.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TlpSmoker.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.TlpSmoker.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
             this.TlpSmoker.Size = new System.Drawing.Size(165, 33);
             this.TlpSmoker.TabIndex = 23;
             // 
@@ -363,6 +351,22 @@ namespace PatientManagementSystem
             this.ChkBxNo.TabIndex = 23;
             this.ChkBxNo.Text = "No";
             this.ChkBxNo.UseVisualStyleBackColor = true;
+            // 
+            // ChkBxYes
+            // 
+            this.ChkBxYes.AutoSize = true;
+            this.ChkBxYes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ChkBxYes.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ChkBxYes.Location = new System.Drawing.Point(3, 3);
+            this.ChkBxYes.Name = "ChkBxYes";
+            this.ChkBxYes.Size = new System.Drawing.Size(76, 27);
+            this.ChkBxYes.TabIndex = 22;
+            this.ChkBxYes.Text = "Yes";
+            this.ChkBxYes.UseVisualStyleBackColor = true;
+            // 
+            // PhotoDialog
+            // 
+            this.PhotoDialog.Filter = "Image Files|*.PNG;*.JPG;*.JPEG|All files|*.*";
             // 
             // AddPatientForm
             // 

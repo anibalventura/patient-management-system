@@ -263,6 +263,10 @@ namespace PatientManagementSystem
             this.LblProfilePhoto.TabIndex = 15;
             this.LblProfilePhoto.Text = "Profile photo";
             // 
+            // PhotoDialog
+            // 
+            this.PhotoDialog.Filter = "Image Files|*.PNG;*.JPG;*.JPEG|All files|*.*";
+            // 
             // AddDoctorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
