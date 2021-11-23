@@ -76,13 +76,13 @@ namespace PatientManagementSystem
 
                 switch (appointment.IdAppointmentStatus)
                 {
-                    case (int)AppointmentStatus.PendingConsult:
+                    case (int)AppointmentStatus.PENDING_CONSULT:
                         BtnConsult.Show();
                         break;
-                    case (int)AppointmentStatus.PendingResult:
+                    case (int)AppointmentStatus.PENDING_RESULT:
                         BtnConsultResults.Show();
                         break;
-                    case (int)AppointmentStatus.Complete:
+                    case (int)AppointmentStatus.COMPLETE:
                         BtnSeeResults.Show();
                         break;
                 }

@@ -76,6 +76,7 @@ namespace PatientManagementSystem
             // 
             this.BtnUsers.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.BtnUsers.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.BtnUsers.Enabled = false;
             this.BtnUsers.FlatAppearance.BorderSize = 0;
             this.BtnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnUsers.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -91,6 +92,7 @@ namespace PatientManagementSystem
             // 
             this.BtnDoctors.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.BtnDoctors.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.BtnDoctors.Enabled = false;
             this.BtnDoctors.FlatAppearance.BorderSize = 0;
             this.BtnDoctors.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnDoctors.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -106,6 +108,7 @@ namespace PatientManagementSystem
             // 
             this.BtnLabTest.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.BtnLabTest.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.BtnLabTest.Enabled = false;
             this.BtnLabTest.FlatAppearance.BorderSize = 0;
             this.BtnLabTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnLabTest.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -121,6 +124,7 @@ namespace PatientManagementSystem
             // 
             this.BtnPatients.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.BtnPatients.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnPatients.Enabled = false;
             this.BtnPatients.FlatAppearance.BorderSize = 0;
             this.BtnPatients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnPatients.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -136,6 +140,7 @@ namespace PatientManagementSystem
             // 
             this.BtnAppointments.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.BtnAppointments.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnAppointments.Enabled = false;
             this.BtnAppointments.FlatAppearance.BorderSize = 0;
             this.BtnAppointments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAppointments.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -151,6 +156,7 @@ namespace PatientManagementSystem
             // 
             this.BtnLabResults.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.BtnLabResults.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnLabResults.Enabled = false;
             this.BtnLabResults.FlatAppearance.BorderSize = 0;
             this.BtnLabResults.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnLabResults.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -200,6 +206,8 @@ namespace PatientManagementSystem
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.HomeForm_FormClosed);
+            this.Load += new System.EventHandler(this.HomeForm_Load);
+            this.VisibleChanged += new System.EventHandler(this.HomeForm_VisibleChanged);
             this.TlpMain.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

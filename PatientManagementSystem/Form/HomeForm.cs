@@ -1,4 +1,8 @@
-﻿using System;
+﻿using BusinessLayer.Enum;
+using BusinessLayer.Service;
+using System;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace PatientManagementSystem
@@ -24,6 +28,16 @@ namespace PatientManagementSystem
         }
 
         #region Events
+
+        private void HomeForm_Load(object sender, EventArgs e)
+        {
+            EnableOptionsByUserType();
+        }
+
+        private void HomeForm_VisibleChanged(object sender, EventArgs e)
+        {
+            EnableOptionsByUserType();
+        }
 
         private void HomeForm_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -84,6 +98,24 @@ namespace PatientManagementSystem
         private void Logout()
         {
             CloseForm();
+        }
+
+        private void EnableOptionsByUserType()
+        {
+            int userType = (int)LoginRepository.Instance.IdLogedUserType;
+
+            if (userType == (int)UserTypeOptions.ADMIN)
+            {
+                BtnUsers.Enabled = true;
+                BtnDoctors.Enabled = true;
+                BtnLabTest.Enabled = true;
+            }
+            else if (userType == (int)UserTypeOptions.DOCTOR)
+            {
+                BtnPatients.Enabled = true;
+                BtnAppointments.Enabled = true;
+                BtnLabResults.Enabled = true;
+            }
         }
 
         private void CloseForm()

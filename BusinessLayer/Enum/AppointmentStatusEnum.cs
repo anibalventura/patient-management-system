@@ -2,8 +2,8 @@
 {
     public enum AppointmentStatus
     {
-        Complete = 1,
-        PendingResult,
-        PendingConsult
+        COMPLETE = 1,
+        PENDING_RESULT,
+        PENDING_CONSULT
     }
 }
