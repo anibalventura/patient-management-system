@@ -87,7 +87,7 @@ namespace Database.Repository
             }
         }
 
-        public DataTable GetAll()
+        public DataTable GetAllPending()
         {
             string sqlQuery = "select u.Id as 'Code', u.Name, u.LastName as 'Last name', u.Email, u.Username, ut.Name as 'User type' from Users u inner join UserType ut on u.IdUserType = ut.Id";
             SqlDataAdapter adapter = new SqlDataAdapter(sqlQuery, GetConnection());

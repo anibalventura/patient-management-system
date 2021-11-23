@@ -1,13 +1,26 @@
-﻿using System;
+﻿using BusinessLayer.Repository;
+using BusinessLayer.Service;
+using System;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace PatientManagementSystem
 {
     public partial class ConsultAppointmentResultsForm : Form
     {
+        private LabResultService _labResultService;
+        private AppointmentService _appointmentService;
+
         public ConsultAppointmentResultsForm()
         {
             InitializeComponent();
+
+            // Init SQL connection.
+            string connectionString = ConfigurationManager.ConnectionStrings["Default"].ConnectionString;
+            SqlConnection connection = new SqlConnection(connectionString);
+            _labResultService = new LabResultService(connection);
+            _appointmentService = new AppointmentService(connection);
         }
 
         // Disable window close button.
@@ -49,12 +62,29 @@ namespace PatientManagementSystem
 
         private void LoadLabResults()
         {
-
+            DgvLabResults.DataSource = _labResultService.GetByAppointment((int)AppointmentRepository.Instance.IdSelectedAppointment);
+            DgvLabResults.ClearSelection();
         }
 
         private void CompleteAppointment()
         {
-            CloseForm();
+            bool result = _appointmentService.Complete((int)AppointmentRepository.Instance.IdSelectedAppointment);
+
+            if (result)
+            {
+                DialogResult response = MessageBox.Show("Appointment complete successfully.", "Notification!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                if (response == DialogResult.OK)
+                {
+                    CloseForm();
+                }
+            }
+            else
+            {
+                MessageBox.Show("There was a problem completing the appointment, try again later.", "Error!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void CloseForm()

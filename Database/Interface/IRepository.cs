@@ -8,6 +8,6 @@ namespace Database.Repository
         bool Edit(T item);
         bool Delete(int id);
         T GetById(int id);
-        DataTable GetAll();
+        DataTable GetAllPending();
     }
 }

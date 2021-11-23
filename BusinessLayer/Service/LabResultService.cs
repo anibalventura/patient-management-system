@@ -45,9 +45,19 @@ namespace BusinessLayer.Service
             return _labResultRepository.GetByPatient(patientIdentification);
         }
 
-        public DataTable GetAll()
+        public DataTable GetByAppointment(int appointmentId)
         {
-            return _labResultRepository.GetAll();
+            return _labResultRepository.GetByAppointment(appointmentId);
+        }
+
+        public DataTable GetCompleteByAppointment(int appointmentId)
+        {
+            return _labResultRepository.GetCompleteByAppointment(appointmentId);
+        }
+
+        public DataTable GetAllPending()
+        {
+            return _labResultRepository.GetAllPending();
         }
     }
 }

@@ -26,6 +26,16 @@ namespace BusinessLayer.Service
             throw new NotImplementedException();
         }
 
+        public bool Consult(int appointmentId)
+        {
+            return _appointmentRepository.Consult(appointmentId);
+        }
+
+        public bool Complete(int appointmentId)
+        {
+            return _appointmentRepository.Complete(appointmentId);
+        }
+
         public bool Delete(int appointmentId)
         {
             return _appointmentRepository.Delete(appointmentId);
@@ -36,9 +46,9 @@ namespace BusinessLayer.Service
             return _appointmentRepository.GetById(appointmentId);
         }
 
-        public DataTable GetAll()
+        public DataTable GetAllPending()
         {
-            return _appointmentRepository.GetAll();
+            return _appointmentRepository.GetAllPending();
         }
     }
 }

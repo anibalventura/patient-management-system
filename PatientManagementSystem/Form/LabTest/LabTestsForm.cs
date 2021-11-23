@@ -87,7 +87,7 @@ namespace PatientManagementSystem
 
         private void LoadLabTests()
         {
-            DgvLabTests.DataSource = _labTestService.GetAll();
+            DgvLabTests.DataSource = _labTestService.GetAllPending();
             DgvLabTests.ClearSelection();
         }
 

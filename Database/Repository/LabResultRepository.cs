@@ -62,9 +62,34 @@ namespace Database.Repository
             return LoadData(adapter);
         }
 
-        public DataTable GetAll()
+        public DataTable GetByAppointment(int appointmentId)
         {
-            // Get only lab results with 'Pending' status (2).
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            string sqlQuery = "select lt.Name as 'Test Name', rs.Name as 'Result Status' from LabResults lr inner join LabTests lt on lr.IdLabTest = lt.Id inner join ResultStatus rs on lr.IdResultStatus = rs.Id where lr.IdAppointment = @appointmentid";
+            SqlCommand command = new SqlCommand(sqlQuery, GetConnection());
+
+            command.Parameters.AddWithValue("@appointmentid", appointmentId);
+            adapter.SelectCommand = command;
+
+            return LoadData(adapter);
+        }
+
+        // Get only lab results by appointment and with result 'Complete' (1).
+        public DataTable GetCompleteByAppointment(int appointmentId)
+        {
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            string sqlQuery = "select lt.Name as 'Test Name', lr.Result from LabResults lr inner join LabTests lt on lr.IdLabTest = lt.Id inner join ResultStatus rs on lr.IdResultStatus = rs.Id where lr.IdAppointment = @appointmentid and rs.Id = 1";
+            SqlCommand command = new SqlCommand(sqlQuery, GetConnection());
+
+            command.Parameters.AddWithValue("@appointmentid", appointmentId);
+            adapter.SelectCommand = command;
+
+            return LoadData(adapter);
+        }
+
+        // Get only lab results with 'Pending' status (2).
+        public DataTable GetAllPending()
+        {
             string sqlQuery = "select lr.Id as 'Code', p.Name, p.LastName as 'Last name', p.Identification, lt.Name as 'Lab test' from LabResults lr inner join Patients p on lr.IdPatient = p.Id inner join LabTests lt on lr.IdLabTest = lt.Id where IdResultStatus = 2";
             SqlDataAdapter adapter = new SqlDataAdapter(sqlQuery, GetConnection());
             return LoadData(adapter);

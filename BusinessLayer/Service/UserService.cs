@@ -35,9 +35,9 @@ namespace BusinessLayer.Service
             return _userRepository.GetById(userId);
         }
 
-        public DataTable GetAll()
+        public DataTable GetAllPending()
         {
-            return _userRepository.GetAll();
+            return _userRepository.GetAllPending();
         }
 
         public bool CheckUsername(string username)

@@ -127,7 +127,7 @@ namespace PatientManagementSystem
 
         private void LoadAppointments()
         {
-            DgvAppointments.DataSource = _appointmentService.GetAll();
+            DgvAppointments.DataSource = _appointmentService.GetAllPending();
             DgvAppointments.ClearSelection();
         }
 

@@ -30,11 +30,11 @@ namespace PatientManagementSystem
         private void InitializeComponent()
         {
             this.TlpMain = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DgvLabResults = new System.Windows.Forms.DataGridView();
             this.BtnCompleteAppointment = new System.Windows.Forms.Button();
             this.BtnCancel = new System.Windows.Forms.Button();
             this.TlpMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvLabResults)).BeginInit();
             this.SuspendLayout();
             // 
             // TlpMain
@@ -44,7 +44,7 @@ namespace PatientManagementSystem
             this.TlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
             this.TlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
             this.TlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.TlpMain.Controls.Add(this.dataGridView1, 1, 1);
+            this.TlpMain.Controls.Add(this.DgvLabResults, 1, 1);
             this.TlpMain.Controls.Add(this.BtnCompleteAppointment, 1, 3);
             this.TlpMain.Controls.Add(this.BtnCancel, 2, 3);
             this.TlpMain.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -59,23 +59,23 @@ namespace PatientManagementSystem
             this.TlpMain.Size = new System.Drawing.Size(678, 450);
             this.TlpMain.TabIndex = 0;
             // 
-            // dataGridView1
+            // DgvLabResults
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TlpMain.SetColumnSpan(this.dataGridView1, 2);
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(104, 93);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.TlpMain.SetRowSpan(this.dataGridView1, 2);
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(468, 174);
-            this.dataGridView1.TabIndex = 0;
+            this.DgvLabResults.AllowUserToAddRows = false;
+            this.DgvLabResults.AllowUserToDeleteRows = false;
+            this.DgvLabResults.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DgvLabResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TlpMain.SetColumnSpan(this.DgvLabResults, 2);
+            this.DgvLabResults.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DgvLabResults.Location = new System.Drawing.Point(104, 93);
+            this.DgvLabResults.MultiSelect = false;
+            this.DgvLabResults.Name = "DgvLabResults";
+            this.DgvLabResults.ReadOnly = true;
+            this.TlpMain.SetRowSpan(this.DgvLabResults, 2);
+            this.DgvLabResults.RowTemplate.Height = 25;
+            this.DgvLabResults.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvLabResults.Size = new System.Drawing.Size(468, 174);
+            this.DgvLabResults.TabIndex = 0;
             // 
             // BtnCompleteAppointment
             // 
@@ -120,7 +120,7 @@ namespace PatientManagementSystem
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ConsultAppointmentResultsForm_FormClosed);
             this.Load += new System.EventHandler(this.ConsultAppointmentResultsForm_Load);
             this.TlpMain.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvLabResults)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -128,7 +128,7 @@ namespace PatientManagementSystem
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel TlpMain;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DgvLabResults;
         private System.Windows.Forms.Button BtnCompleteAppointment;
         private System.Windows.Forms.Button BtnCancel;
     }

@@ -28,6 +28,28 @@ namespace Database.Repository
             throw new NotImplementedException();
         }
 
+        // Update appointment to 'Pending Results' status (2).
+        public bool Consult(int appointmentId)
+        {
+            string sqlQuery = "update Appointments set IdAppointmentStatus = 2 where Id = @id";
+            SqlCommand command = new SqlCommand(sqlQuery, GetConnection());
+
+            command.Parameters.AddWithValue("@id", appointmentId);
+
+            return ExecuteDml(command);
+        }
+
+        // Update appointment to 'Complete' status (1).
+        public bool Complete(int appointmentId)
+        {
+            string sqlQuery = "update Appointments set IdAppointmentStatus = 1 where Id = @id";
+            SqlCommand command = new SqlCommand(sqlQuery, GetConnection());
+
+            command.Parameters.AddWithValue("@id", appointmentId);
+
+            return ExecuteDml(command);
+        }
+
         public bool Delete(int appointmentId)
         {
             string sqlQuery = "delete Appointments where Id = @id";
@@ -74,7 +96,7 @@ namespace Database.Repository
             }
         }
 
-        public DataTable GetAll()
+        public DataTable GetAllPending()
         {
             string sqlQuery = "select ap.Id as 'Code', (p.Name + ' ' + p.LastName) as 'Patient', (d.Name + ' ' + d.LastName) as 'Doctor', cast(ap.DateAndTime as Date) as 'Date', cast(ap.DateAndTime as Time(0)) as 'Time', ap.Cause, apst.Name as 'Status' from Appointments ap inner join Patients p on ap.IdPatient = p.Id inner join Doctors d on ap.IdDoctor = d.Id inner join AppointmentStatus apst on ap.IdAppointmentStatus = apst.Id";
             SqlDataAdapter adapter = new SqlDataAdapter(sqlQuery, GetConnection());
