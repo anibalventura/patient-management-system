@@ -4,9 +4,30 @@
 [![SQL Server](https://img.shields.io/static/v1?label=SQL%20Server&message=15.0.2&color=CC2927)](https://dotnet.microsoft.com)
 [![License](https://img.shields.io/static/v1?label=License&message=MIT&color=blue)](LICENCE.md)
 
+<p align="center">
+  <img src="Screenshots/home-screen.png" height=250px/>
+  <img src="Screenshots/users-screen.png" height=250px/>
+  <img src="Screenshots/add-doctor-screen.png" height=250px/>
+  <img src="Screenshots/appointment-wizard-screen.png" height=250px/>
+</p>
+
 WinForm app to manage a patients system with lab results, written in .NET Core with SQL-Server using OOP.
 
 ## Features
+
+- Data persistence with SQL Server.
+- Login with username and password.
+  - Verify in the database if the data entered is correct.
+- Home with options depending of user type (Adm/Doctor).
+  - Option in menu strip to logout user.
+- Manage users to login (CRUD).
+  - Send a email to the user when created.
+- Manage doctors and patients (CRUD).
+  - Can select a profile picture for both.
+- Manage lab tests and results (CRUD).
+- Manage appointments for patients (CRUD).
+  - Wizard to select a patient, doctor and date.
+  - Change state of the appointment.
 
 ## Database Diagram
 
