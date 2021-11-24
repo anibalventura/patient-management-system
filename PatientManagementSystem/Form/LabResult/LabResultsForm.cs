@@ -93,7 +93,7 @@ namespace PatientManagementSystem
 
         private void LoadLabResults()
         {
-            DgvLabResults.DataSource = _labResultService.GetAllPending();
+            DgvLabResults.DataSource = _labResultService.GetAll();
             DgvLabResults.ClearSelection();
         }
 

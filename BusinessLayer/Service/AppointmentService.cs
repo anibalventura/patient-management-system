@@ -46,9 +46,9 @@ namespace BusinessLayer.Service
             return _appointmentRepository.GetById(appointmentId);
         }
 
-        public DataTable GetAllPending()
+        public DataTable GetAll()
         {
-            return _appointmentRepository.GetAllPending();
+            return _appointmentRepository.GetAll();
         }
     }
 }

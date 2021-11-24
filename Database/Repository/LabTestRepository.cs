@@ -72,7 +72,7 @@ namespace Database.Repository
             }
         }
 
-        public DataTable GetAllPending()
+        public DataTable GetAll()
         {
             string sqlQuery = "select Id as 'Code', Name from LabTests";
             SqlDataAdapter adapter = new SqlDataAdapter(sqlQuery, GetConnection());

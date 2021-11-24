@@ -35,9 +35,9 @@ namespace BusinessLayer.Service
             return _labTestRepository.GetById(labTestId);
         }
 
-        public DataTable GetAllPending()
+        public DataTable GetAll()
         {
-            return _labTestRepository.GetAllPending();
+            return _labTestRepository.GetAll();
         }
     }
 }

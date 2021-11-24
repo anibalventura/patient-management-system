@@ -50,9 +50,9 @@ namespace BusinessLayer.Service
             return _doctorRepository.GetByIdentf(doctorIdentification);
         }
 
-        public DataTable GetAllPending()
+        public DataTable GetAll()
         {
-            return _doctorRepository.GetAllPending();
+            return _doctorRepository.GetAll();
         }
     }
 }

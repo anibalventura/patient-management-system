@@ -87,7 +87,7 @@ namespace PatientManagementSystem
 
         private void LoadPatients()
         {
-            DgvPatients.DataSource = _patientService.GetAllPending();
+            DgvPatients.DataSource = _patientService.GetAll();
             DgvPatients.ClearSelection();
         }
 

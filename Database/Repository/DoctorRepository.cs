@@ -130,7 +130,7 @@ namespace Database.Repository
             return LoadData(adapter);
         }
 
-        public DataTable GetAllPending()
+        public DataTable GetAll()
         {
             string sqlQuery = "select Id as 'Code', Name, LastName as 'Last name', Email, Phone, Identification from Doctors";
             SqlDataAdapter adapter = new SqlDataAdapter(sqlQuery, GetConnection());

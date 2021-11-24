@@ -55,9 +55,9 @@ namespace BusinessLayer.Service
             return _labResultRepository.GetCompleteByAppointment(appointmentId);
         }
 
-        public DataTable GetAllPending()
+        public DataTable GetAll()
         {
-            return _labResultRepository.GetAllPending();
+            return _labResultRepository.GetAll();
         }
     }
 }

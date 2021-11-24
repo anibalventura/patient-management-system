@@ -88,7 +88,7 @@ namespace Database.Repository
         }
 
         // Get only lab results with 'Pending' status (2).
-        public DataTable GetAllPending()
+        public DataTable GetAll()
         {
             string sqlQuery = "select lr.Id as 'Code', p.Name, p.LastName as 'Last name', p.Identification, lt.Name as 'Lab test' from LabResults lr inner join Patients p on lr.IdPatient = p.Id inner join LabTests lt on lr.IdLabTest = lt.Id where IdResultStatus = 2";
             SqlDataAdapter adapter = new SqlDataAdapter(sqlQuery, GetConnection());
