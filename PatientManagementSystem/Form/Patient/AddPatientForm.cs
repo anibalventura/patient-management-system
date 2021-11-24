@@ -44,6 +44,8 @@ namespace PatientManagementSystem
         private void AddPatientForm_Load(object sender, EventArgs e)
         {
             LoadPatientToEdit();
+
+            DtpBirthDate.MaxDate = DateTime.Now;
         }
 
         private void AddPatientForm_FormClosed(object sender, FormClosedEventArgs e)

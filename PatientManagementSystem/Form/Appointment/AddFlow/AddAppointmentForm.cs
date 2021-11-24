@@ -42,6 +42,8 @@ namespace PatientManagementSystem
         private void AddAppointmentForm_Load(object sender, EventArgs e)
         {
             LoadSelectedInfo();
+
+            DtpDate.MinDate = DateTime.Now;
         }
 
         private void AddAppointmentForm_FormClosed(object sender, FormClosedEventArgs e)

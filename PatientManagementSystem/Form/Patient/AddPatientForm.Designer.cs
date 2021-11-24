@@ -322,7 +322,7 @@ namespace PatientManagementSystem
             this.DtpBirthDate.Name = "DtpBirthDate";
             this.DtpBirthDate.Size = new System.Drawing.Size(165, 29);
             this.DtpBirthDate.TabIndex = 21;
-            this.DtpBirthDate.Value = new System.DateTime(2021, 11, 20, 0, 0, 0, 0);
+            this.DtpBirthDate.Value = new System.DateTime(2021, 11, 23, 18, 35, 14, 0);
             // 
             // TlpSmoker
             // 
