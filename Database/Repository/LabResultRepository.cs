@@ -50,10 +50,11 @@ namespace Database.Repository
             throw new NotImplementedException();
         }
 
+        // Get only lab results with 'Pending' status (2).
         public DataTable GetByPatient(string patientIdentification)
         {
             SqlDataAdapter adapter = new SqlDataAdapter();
-            string sqlQuery = "select lr.Id as 'Code', p.Name, p.LastName as 'Last name', p.Identification, lt.Name as 'Lab test' from LabResults lr inner join Patients p on lr.IdPatient = p.Id inner join LabTests lt on lr.IdLabTest = lt.Id where p.Identification = @patientidentification";
+            string sqlQuery = "select lr.Id as 'Code', p.Name, p.LastName as 'Last name', p.Identification, lt.Name as 'Lab test' from LabResults lr inner join Patients p on lr.IdPatient = p.Id inner join LabTests lt on lr.IdLabTest = lt.Id where p.Identification = @patientidentification and lr.IdResultStatus = 2";
             SqlCommand command = new SqlCommand(sqlQuery, GetConnection());
 
             command.Parameters.AddWithValue("@patientidentification", patientIdentification);
