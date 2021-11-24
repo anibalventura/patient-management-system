@@ -1,8 +1,10 @@
 # Patient Management System
 
-[![.NET](https://img.shields.io/static/v1?label=.NET&message=3.1&color=purple)](https://dotnet.microsoft.com)
+[![.NET Core](https://img.shields.io/static/v1?label=.NET%20Core&message=3.1&color=purple)](https://dotnet.microsoft.com)
 [![SQL Server](https://img.shields.io/static/v1?label=SQL%20Server&message=15.0.2&color=CC2927)](https://dotnet.microsoft.com)
 [![License](https://img.shields.io/static/v1?label=License&message=MIT&color=blue)](LICENCE.md)
+
+WinForm app to manage a patients system with lab results, written in .NET Core with SQL-Server using OOP.
 
 ## Features
 
