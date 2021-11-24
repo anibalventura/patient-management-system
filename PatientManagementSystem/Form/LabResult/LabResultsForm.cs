@@ -99,12 +99,20 @@ namespace PatientManagementSystem
 
         private void SearchByPatientIdentification()
         {
-            string patientIdentification = TxtBxPatientIdentification.Text;
-
-            if (patientIdentification != null)
+            if (TxtBxPatientIdentification.MaskCompleted)
             {
-                DgvLabResults.DataSource = _labResultService.GetByPatient(patientIdentification);
-                DgvLabResults.ClearSelection();
+                string patientIdentification = TxtBxPatientIdentification.Text;
+
+                if (patientIdentification != null)
+                {
+                    DgvLabResults.DataSource = _labResultService.GetByPatient(patientIdentification);
+                    DgvLabResults.ClearSelection();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please complete the field.", "Warning!",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

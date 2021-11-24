@@ -83,12 +83,20 @@ namespace PatientManagementSystem
 
         private void SearchDoctor()
         {
-            string doctorIdentification = TxtBxDoctorIdentification.Text;
-
-            if (doctorIdentification != null)
+            if (TxtBxDoctorIdentification.MaskCompleted)
             {
-                DgvDoctors.DataSource = _doctorService.GetByIdentf(doctorIdentification);
-                DgvDoctors.ClearSelection();
+                string doctorIdentification = TxtBxDoctorIdentification.Text;
+
+                if (doctorIdentification != null)
+                {
+                    DgvDoctors.DataSource = _doctorService.GetByIdentf(doctorIdentification);
+                    DgvDoctors.ClearSelection();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please complete the field.", "Warning!",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
