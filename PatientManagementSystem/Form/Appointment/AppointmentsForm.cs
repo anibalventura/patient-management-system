@@ -66,11 +66,11 @@ namespace PatientManagementSystem
         {
             if (e.RowIndex >= 0)
             {
+                HideButtons();
+
                 int selection = Convert.ToInt32(DgvAppointments.Rows[e.RowIndex].Cells[0].Value.ToString());
 
                 AppointmentRepository.Instance.IdSelectedAppointment = selection;
-
-                HideButtons();
 
                 Appointment appointment = _appointmentService.GetById(selection);
 

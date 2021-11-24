@@ -77,12 +77,10 @@ namespace PatientManagementSystem
             }
             else
             {
-                LabTest newLabTest = new LabTest()
+                bool result = _labTestService.Add(new LabTest()
                 {
                     Name = name,
-                };
-
-                bool result = _labTestService.Add(newLabTest);
+                });
 
                 if (result)
                 {
@@ -90,10 +88,6 @@ namespace PatientManagementSystem
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     if (response == DialogResult.OK)
-                    {
-                        CloseForm();
-                    }
-                    else
                     {
                         CloseForm();
                     }
@@ -127,13 +121,11 @@ namespace PatientManagementSystem
             }
             else
             {
-                LabTest editedLabTest = new LabTest()
+                bool result = _labTestService.Edit(new LabTest()
                 {
                     Id = (int)LabTestRepository.Instance.IdSelectedLabTest,
                     Name = name,
-                };
-
-                bool result = _labTestService.Edit(editedLabTest);
+                });
 
                 if (result)
                 {
@@ -141,10 +133,6 @@ namespace PatientManagementSystem
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     if (response == DialogResult.OK)
-                    {
-                        CloseForm();
-                    }
-                    else
                     {
                         CloseForm();
                     }

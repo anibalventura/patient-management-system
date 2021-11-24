@@ -109,7 +109,7 @@ namespace PatientManagementSystem
             else
             {
                 MessageBox.Show("Please select a doctor to continue.", "Warning!",
-                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

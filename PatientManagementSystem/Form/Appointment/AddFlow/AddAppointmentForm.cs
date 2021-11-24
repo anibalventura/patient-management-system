@@ -93,16 +93,14 @@ namespace PatientManagementSystem
             }
             else
             {
-                Appointment newAppointment = new Appointment()
+                bool result = _appointmentService.Add(new Appointment()
                 {
                     IdPatient = (int)AppointmentRepository.Instance.IdSelectedPatient,
                     IdDoctor = (int)AppointmentRepository.Instance.IdSelectedDoctor,
                     DateAndTime = date + time,
                     Cause = cause,
                     IdAppointmentStatus = 3
-                };
-
-                bool result = _appointmentService.Add(newAppointment);
+                });
 
                 if (result)
                 {
@@ -110,10 +108,6 @@ namespace PatientManagementSystem
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     if (response == DialogResult.OK)
-                    {
-                        CloseForm();
-                    }
-                    else
                     {
                         CloseForm();
                     }

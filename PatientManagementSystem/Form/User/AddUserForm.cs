@@ -155,10 +155,6 @@ namespace PatientManagementSystem
                     {
                         CloseForm();
                     }
-                    else
-                    {
-                        CloseForm();
-                    }
                 }
                 else
                 {
@@ -171,7 +167,8 @@ namespace PatientManagementSystem
         private void SendEmailNewUser(User user)
         {
             string subject = "Welcome to Patient Management System! - Login Details";
-            string body = $@"Hi {user.Name} {user.LastName},
+            string body = $@"
+             Hi {user.Name} {user.LastName},
 
              Welcome to Patient Management System. Please find your login details below.
 
@@ -243,10 +240,6 @@ namespace PatientManagementSystem
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     if (response == DialogResult.OK)
-                    {
-                        CloseForm();
-                    }
-                    else
                     {
                         CloseForm();
                     }

@@ -136,7 +136,7 @@ namespace PatientManagementSystem
             }
             else
             {
-                Patient newPatient = new Patient()
+                bool result = _patientService.Add(new Patient()
                 {
                     Name = name,
                     LastName = lastName,
@@ -146,9 +146,7 @@ namespace PatientManagementSystem
                     BirthDate = birthDate,
                     Smoker = smoker,
                     Allergies = allergies,
-                };
-
-                bool result = _patientService.Add(newPatient);
+                });
 
                 if (result)
                 {
@@ -158,10 +156,6 @@ namespace PatientManagementSystem
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     if (response == DialogResult.OK)
-                    {
-                        CloseForm();
-                    }
-                    else
                     {
                         CloseForm();
                     }
@@ -190,6 +184,7 @@ namespace PatientManagementSystem
                 ChkBxNo.Checked = patient.Smoker == false ? true : false;
                 TxtBxAllergies.Text = patient.Allergies;
                 PbPatient.ImageLocation = patient.Photo;
+
                 _fileName = patient.Photo;
             }
         }
@@ -220,7 +215,7 @@ namespace PatientManagementSystem
             }
             else
             {
-                Patient updatedPatient = new Patient()
+                bool result = _patientService.Edit(new Patient()
                 {
                     Id = (int)PatientRepository.Instance.IdSelectedPatient,
                     Name = name,
@@ -231,9 +226,7 @@ namespace PatientManagementSystem
                     BirthDate = birthDate,
                     Smoker = smoker,
                     Allergies = allergies,
-                };
-
-                bool result = _patientService.Edit(updatedPatient);
+                });
 
                 if (result)
                 {
@@ -243,10 +236,6 @@ namespace PatientManagementSystem
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     if (response == DialogResult.OK)
-                    {
-                        CloseForm();
-                    }
-                    else
                     {
                         CloseForm();
                     }

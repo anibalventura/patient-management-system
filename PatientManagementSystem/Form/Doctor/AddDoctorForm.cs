@@ -127,16 +127,15 @@ namespace PatientManagementSystem
             }
             else
             {
-                Doctor newDoctor = new Doctor()
+
+                bool result = _doctorService.Add(new Doctor()
                 {
                     Name = name,
                     LastName = lastName,
                     Email = email,
                     Phone = phone,
                     Identification = identification,
-                };
-
-                bool result = _doctorService.Add(newDoctor);
+                });
 
                 if (result)
                 {
@@ -191,7 +190,7 @@ namespace PatientManagementSystem
             }
             else
             {
-                Doctor updatedDoctor = new Doctor()
+                bool result = _doctorService.Edit(new Doctor()
                 {
                     Id = (int)DoctorRepository.Instance.IdSelectedDoctor,
                     Name = name,
@@ -199,9 +198,7 @@ namespace PatientManagementSystem
                     Email = email,
                     Phone = phone,
                     Identification = identification,
-                };
-
-                bool result = _doctorService.Edit(updatedDoctor);
+                });
 
                 if (result)
                 {
@@ -211,10 +208,6 @@ namespace PatientManagementSystem
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     if (response == DialogResult.OK)
-                    {
-                        CloseForm();
-                    }
-                    else
                     {
                         CloseForm();
                     }

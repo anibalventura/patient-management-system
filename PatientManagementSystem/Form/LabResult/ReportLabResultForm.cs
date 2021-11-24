@@ -65,14 +65,12 @@ namespace PatientManagementSystem
             }
             else
             {
-                LabResult reportedLabResult = new LabResult()
+                bool result = _labResultService.ReportResult(new LabResult()
                 {
                     Id = (int)LabResultRepository.Instance.IdSelectedLabResult,
                     Result = labResult,
-                    IdResultStatus = 1, // Set to 'Complete' (1).
-                };
-
-                bool result = _labResultService.ReportResult(reportedLabResult);
+                    IdResultStatus = 1 // Set to 'Complete' (1).
+                });
 
                 if (result)
                 {
