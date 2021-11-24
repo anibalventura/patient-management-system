@@ -59,14 +59,19 @@ namespace PatientManagementSystem
             // 
             // DgvLabResults
             // 
+            this.DgvLabResults.AllowUserToAddRows = false;
+            this.DgvLabResults.AllowUserToDeleteRows = false;
             this.DgvLabResults.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DgvLabResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TlpMain.SetColumnSpan(this.DgvLabResults, 2);
             this.DgvLabResults.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DgvLabResults.Location = new System.Drawing.Point(104, 93);
+            this.DgvLabResults.MultiSelect = false;
             this.DgvLabResults.Name = "DgvLabResults";
+            this.DgvLabResults.ReadOnly = true;
             this.TlpMain.SetRowSpan(this.DgvLabResults, 2);
             this.DgvLabResults.RowTemplate.Height = 25;
+            this.DgvLabResults.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvLabResults.Size = new System.Drawing.Size(466, 174);
             this.DgvLabResults.TabIndex = 0;
             // 
