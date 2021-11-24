@@ -109,9 +109,15 @@ namespace PatientManagementSystem
                 BtnUsers.Enabled = true;
                 BtnDoctors.Enabled = true;
                 BtnLabTest.Enabled = true;
+                BtnPatients.Enabled = false;
+                BtnAppointments.Enabled = false;
+                BtnLabResults.Enabled = false;
             }
             else if (userType == (int)UserTypeOptions.DOCTOR)
             {
+                BtnUsers.Enabled = false;
+                BtnDoctors.Enabled = false;
+                BtnLabTest.Enabled = false;
                 BtnPatients.Enabled = true;
                 BtnAppointments.Enabled = true;
                 BtnLabResults.Enabled = true;
