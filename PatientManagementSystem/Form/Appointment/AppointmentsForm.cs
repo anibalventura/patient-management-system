@@ -50,6 +50,8 @@ namespace PatientManagementSystem
         {
             HideButtons();
             LoadAppointments();
+
+            AppointmentRepository.Instance.IdSelectedAppointment = null;
         }
 
         private void AppointmentsForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -181,11 +183,13 @@ namespace PatientManagementSystem
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
+                    HideButtons();
                     LoadAppointments();
                     AppointmentRepository.Instance.IdSelectedAppointment = null;
                 }
                 else
                 {
+                    HideButtons();
                     DgvAppointments.ClearSelection();
                     AppointmentRepository.Instance.IdSelectedAppointment = null;
                 }
