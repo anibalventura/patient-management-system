@@ -51,7 +51,7 @@ namespace PatientManagementSystem
 
         private void DgvLabTests_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            foreach (System.Windows.Forms.DataGridViewRow row in DgvLabTests.SelectedRows)
+            foreach (DataGridViewRow row in DgvLabTests.SelectedRows)
             {
                 AppointmentRepository.Instance.SelectedLabTests.Add(Convert.ToInt32(row.Cells[0].Value));
             }
@@ -123,6 +123,7 @@ namespace PatientManagementSystem
         private void CloseForm()
         {
             AppointmentRepository.Instance.SelectedLabTests.Clear();
+            AppointmentRepository.Instance.IdSelectedAppointment = null;
 
             this.Close();
         }

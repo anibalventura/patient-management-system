@@ -50,8 +50,6 @@ namespace PatientManagementSystem
         {
             HideButtons();
             LoadAppointments();
-
-            AppointmentRepository.Instance.IdSelectedAppointment = null;
         }
 
         private void AppointmentsForm_FormClosed(object sender, FormClosedEventArgs e)

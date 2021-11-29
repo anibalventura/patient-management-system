@@ -89,6 +89,8 @@ namespace PatientManagementSystem
 
         private void CloseForm()
         {
+            AppointmentRepository.Instance.IdSelectedAppointment = null;
+
             this.Close();
         }
 
